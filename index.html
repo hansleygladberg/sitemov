@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOV Produtora — Audiovisual Estratégico em Fortaleza, CE</title>
+  <meta name="description" content="Produção audiovisual corporativa, institucional, eventos e conteúdo para redes sociais em Fortaleza, Ceará." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/FAVICON-MOV.png" type="image/png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:#0a0a0a; --gray-90:#111111; --gray-80:#1a1a1a; --gray-60:#2e2e2e;
+      --gray-40:#6b6b6b; --gray-20:#b0b0b0; --white:#f5f5f0; --red:#d42b2b;
+      --fd:'Bebas Neue',sans-serif; --fb:'DM Sans',sans-serif;
+      --ease:cubic-bezier(0.16,1,0.3,1);
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--white);font-family:var(--fb);font-size:16px;line-height:1.6;overflow-x:hidden}
+    img{display:block;max-width:100%} a{text-decoration:none;color:inherit}
+    ::-webkit-scrollbar{width:4px} ::-webkit-scrollbar-track{background:var(--black)} ::-webkit-scrollbar-thumb{background:var(--red);border-radius:2px}
+    .container{width:min(1180px,92vw);margin:0 auto}
+    .label{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:1rem}
+    .section-title{font-family:var(--fd);font-size:clamp(3rem,7vw,6rem);line-height:.95}
+    .section-title span{color:var(--red)}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 2rem;font-family:var(--fb);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:.4s var(--ease);border:none}
+    .btn-p{background:var(--red);color:var(--white);border:2px solid var(--red)} .btn-p:hover{background:transparent;color:var(--red)}
+    .btn-o{background:transparent;color:var(--white);border:2px solid rgba(245,245,240,.3)} .btn-o:hover{border-color:var(--white)}
+    .ico{width:18px;height:18px;flex-shrink:0}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+    .reveal.visible{opacity:1;transform:none}
+    .d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s} .d4{transition-delay:.4s}
+
+    /* HEADER */
+    header{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 0;transition:background .3s,padding .3s}
+    header.scrolled{background:rgba(10,10,10,.96);backdrop-filter:blur(12px);padding:.8rem 0;border-bottom:1px solid var(--gray-60)}
+    .h-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    nav{display:flex;align-items:center;gap:2.5rem}
+    nav a{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-20);transition:color .2s}
+    nav a:hover{color:var(--white)}
+    .h-cta{display:flex;align-items:center;gap:1rem}
+    .h-ig{display:flex;align-items:center;gap:.4rem;font-size:13px;font-weight:500;color:var(--gray-20);transition:color .2s}
+    .h-ig:hover{color:var(--white)} .h-ig svg{width:18px;height:18px}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:.4s var(--ease)}
+    .mob-nav{position:fixed;inset:0;background:rgba(10,10,10,.98);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;opacity:0;pointer-events:none;transition:opacity .3s}
+    .mob-nav.open{opacity:1;pointer-events:all}
+    .mob-nav a{font-family:var(--fd);font-size:3.5rem;letter-spacing:.05em;color:var(--white);transition:color .2s}
+    .mob-nav a:hover{color:var(--red)}
+
+    /* HERO */
+    #hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+    .hero-acc{position:absolute;right:0;top:0;bottom:0;width:46%;background:linear-gradient(135deg,transparent 30%,rgba(212,43,43,.06) 100%);pointer-events:none}
+    .hero-acc::before{content:'';position:absolute;top:0;bottom:0;left:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(212,43,43,.4),transparent)}
+    .hero-cont{position:relative;z-index:2;padding-top:100px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4rem;min-height:100vh}
+    .hero-ey{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+    .hero-ey::before{content:'';display:block;width:40px;height:2px;background:var(--red)}
+    .hero-ey span{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+    .hero-h1{font-family:var(--fd);font-size:clamp(4rem,9vw,8.5rem);line-height:.92;margin-bottom:2rem}
+    .hero-h1 em{font-style:normal;color:var(--red)}
+    .hero-sub{font-size:1.05rem;font-weight:300;color:var(--gray-20);max-width:440px;margin-bottom:2.5rem;line-height:1.7}
+    .hero-acts{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+    .hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--gray-60)}
+    .sn{font-family:var(--fd);font-size:2.8rem;line-height:1} .sn span{color:var(--red)}
+    .sl{font-size:12px;font-weight:500;color:var(--gray-40);text-transform:uppercase;letter-spacing:.1em;margin-top:.3rem}
+    .hero-vis{display:flex;justify-content:center;align-items:center}
+    .clapboard{width:min(420px,46vw);filter:drop-shadow(0 40px 80px rgba(0,0,0,.8));animation:float 4s ease-in-out infinite}
+    .hero-badge{position:absolute;bottom:-1rem;left:-2rem;background:var(--red);color:var(--white);padding:.7rem 1.2rem;border-radius:2px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;box-shadow:0 8px 32px rgba(212,43,43,.4);animation:float 3s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+    /* QUEM SOMOS */
+    #quem-somos{padding:7rem 0;background:var(--gray-90)}
+    .about-g{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+    .about-t{font-size:1.05rem;font-weight:300;color:var(--gray-20);line-height:1.8;margin-bottom:2rem}
+    .features{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--gray-60);border:1px solid var(--gray-60);margin-top:4rem}
+    .feat{background:var(--gray-80);padding:2rem}
+    .feat-i{font-size:1.5rem;margin-bottom:1rem}
+    .feat-t{font-family:var(--fd);font-size:1.4rem;letter-spacing:.04em;margin-bottom:.5rem}
+    .feat-d{font-size:.88rem;color:var(--gray-20);line-height:1.6}
+
+    /* CLIENTES */
+    #clientes{padding:5rem 0;background:var(--black);border-top:1px solid var(--gray-60);border-bottom:1px solid var(--gray-60)}
+    .cli-head{text-align:center;margin-bottom:3rem}
+    .cli-head p{font-size:.9rem;color:var(--gray-40);text-transform:uppercase;letter-spacing:.18em;font-weight:700}
+    .cli-grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.5rem 3rem}
+    .cli-item{opacity:.4;transition:opacity .3s,filter .3s;filter:grayscale(1)}
+    .cli-item:hover{opacity:1;filter:grayscale(0)}
+    .cli-box{background:var(--gray-80);border:1px solid var(--gray-60);border-radius:4px;padding:.9rem 2rem;font-family:var(--fd);font-size:1.1rem;letter-spacing:.12em;color:var(--gray-40);white-space:nowrap;min-width:110px;text-align:center}
+    /* Se quiser usar imagem: <img src="logo.png" style="height:40px;width:auto" /> */
+
+    /* STUDIO */
+    #studio{padding:7rem 0;background:var(--gray-90)}
+    .studio-g{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+    .studio-d{font-size:1rem;font-weight:300;color:var(--gray-20);line-height:1.8;margin-bottom:1.5rem}
+    .mosaic{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:200px 200px;gap:8px}
+    .mos-item{overflow:hidden;border-radius:2px;background:var(--gray-80)}
+    .mos-item.tall{grid-row:span 2}
+    .mos-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+    .mos-item:hover img{transform:scale(1.05)}
+    .mos-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--gray-80),var(--gray-60));color:var(--gray-40);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+
+    /* SERVIÇOS */
+    #servicos{padding:7rem 0;background:var(--black)}
+    .srv-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;gap:2rem}
+    .srv-intro{font-size:1rem;color:var(--gray-20);max-width:360px;line-height:1.7}
+    .srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gray-60);border:1px solid var(--gray-60)}
+    .srv-card{background:var(--gray-90);padding:2.5rem 2rem;transition:background .4s var(--ease);position:relative;overflow:hidden}
+    .srv-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+    .srv-card:hover{background:var(--gray-80)} .srv-card:hover::after{transform:scaleX(1)}
+    .srv-n{font-family:var(--fd);font-size:3rem;line-height:1;color:var(--gray-60);margin-bottom:1.5rem;transition:color .4s var(--ease)}
+    .srv-card:hover .srv-n{color:var(--red)}
+    .srv-t{font-family:var(--fd);font-size:1.6rem;letter-spacing:.03em;margin-bottom:.8rem}
+    .srv-d{font-size:.88rem;font-weight:300;color:var(--gray-20);line-height:1.65}
+
+    /* PORTFÓLIO VÍDEOS */
+    #portfolio-videos{padding:7rem 0;background:var(--gray-90)}
+    .pf-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;gap:2rem;flex-wrap:wrap}
+    .pf-grid-v{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+    .pf-grid-w{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem}
+    .pf-item{position:relative;overflow:hidden;border-radius:2px;background:var(--gray-80);cursor:pointer;display:block}
+    .pf-item.v{aspect-ratio:9/16} .pf-item.w{aspect-ratio:16/9}
+    .pf-thumb{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+    .pf-item:hover .pf-thumb{transform:scale(1.05)}
+    .pf-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.2rem;opacity:.7;transition:opacity .3s}
+    .pf-item:hover .pf-ov{opacity:1}
+    .pf-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(.8);width:52px;height:52px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:all .3s var(--ease)}
+    .pf-item:hover .pf-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+    .pf-play svg{width:20px;height:20px;fill:var(--white);margin-left:3px}
+    .pf-tit{font-family:var(--fd);font-size:1.1rem;letter-spacing:.03em}
+    .pf-cat{font-size:11px;font-weight:500;color:var(--red);letter-spacing:.12em;text-transform:uppercase;margin-top:.2rem}
+    .pf-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1a1a,#2e2e2e);color:var(--gray-40);font-size:11px;letter-spacing:.1em;text-transform:uppercase;flex-direction:column;gap:.5rem}
+
+    /* GALERIA FOTOS */
+    #galeria{padding:7rem 0;background:var(--black)}
+    .gal-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;gap:2rem;flex-wrap:wrap}
+    .masonry{column-count:4;column-gap:8px}
+    .mas-item{break-inside:avoid;margin-bottom:8px;position:relative;overflow:hidden;border-radius:2px;cursor:pointer;background:var(--gray-80)}
+    .mas-item img{width:100%;display:block;transition:transform .5s var(--ease)}
+    .mas-item:hover img{transform:scale(1.04)}
+    .mas-ov{position:absolute;inset:0;background:rgba(0,0,0,0);transition:background .3s;display:flex;align-items:center;justify-content:center}
+    .mas-item:hover .mas-ov{background:rgba(0,0,0,.45)}
+    .mas-zi{opacity:0;transition:opacity .3s} .mas-item:hover .mas-zi{opacity:1}
+    .mas-zi svg{width:36px;height:36px;fill:none;stroke:white;stroke-width:2}
+
+    /* LIGHTBOX */
+    .lb{display:none;position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,.95);align-items:center;justify-content:center}
+    .lb.open{display:flex}
+    .lb-inner{position:relative;max-width:90vw;max-height:90vh}
+    .lb-inner img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:2px}
+    .lb-close{position:absolute;top:-2.5rem;right:0;background:none;border:none;color:var(--white);font-size:2.5rem;cursor:pointer;line-height:1}
+    .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(212,43,43,.7);border:none;color:var(--white);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.5rem;transition:background .2s}
+    .lb-nav:hover{background:var(--red)} .lb-prev{left:-3.5rem} .lb-next{right:-3.5rem}
+    .lb-cnt{position:absolute;bottom:-2rem;left:50%;transform:translateX(-50%);font-size:12px;color:var(--gray-40);white-space:nowrap}
+
+    /* DEPOIMENTOS */
+    #depoimentos{padding:7rem 0;background:var(--gray-90)}
+    .dep-head{text-align:center;margin-bottom:4rem}
+    .dep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .dep-card{background:var(--gray-80);border:1px solid var(--gray-60);padding:2.5rem;border-radius:2px;position:relative}
+    .dep-card::before{content:'\201C';position:absolute;top:1.5rem;right:2rem;font-family:Georgia,serif;font-size:5rem;line-height:1;color:var(--red);opacity:.2}
+    .dep-stars{display:flex;gap:3px;margin-bottom:1.2rem}
+    .dep-stars span{color:#f5c518;font-size:14px}
+    .dep-text{font-size:.95rem;font-weight:300;color:var(--gray-20);line-height:1.75;margin-bottom:1.5rem}
+    .dep-auth{display:flex;align-items:center;gap:1rem;padding-top:1.2rem;border-top:1px solid var(--gray-60)}
+    .dep-av{width:48px;height:48px;border-radius:50%;object-fit:cover;background:var(--gray-60);flex-shrink:0}
+    .dep-n{font-weight:700;font-size:.95rem} .dep-r{font-size:12px;color:var(--red);text-transform:uppercase;letter-spacing:.1em;font-weight:500}
+
+    /* DIRETOR */
+    #diretor{padding:7rem 0;background:var(--black);position:relative;overflow:hidden}
+    #diretor::before{content:'HANSLEY';position:absolute;top:50%;right:-2%;transform:translateY(-50%);font-family:var(--fd);font-size:20vw;color:rgba(245,245,240,.02);pointer-events:none;white-space:nowrap}
+    .dir-g{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
+    .dir-nm{font-size:1.1rem;font-weight:300;color:var(--gray-20);letter-spacing:.1em;margin-bottom:2rem}
+    .dir-bio p{font-size:.97rem;font-weight:300;color:var(--gray-20);line-height:1.8;margin-bottom:1.2rem}
+    .dir-hl{display:flex;gap:2rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--gray-60)}
+    .dir-hn{font-family:var(--fd);font-size:2.2rem;color:var(--red);line-height:1}
+    .dir-hl-l{font-size:12px;color:var(--gray-40);text-transform:uppercase;letter-spacing:.1em;margin-top:.2rem}
+    .dir-vis{position:relative;display:flex;justify-content:center}
+    .dir-pw{position:relative;width:min(420px,100%)}
+    .dir-ph{width:100%;border-radius:2px;object-fit:cover}
+    .dir-ph-pl{width:100%;aspect-ratio:3/4;background:linear-gradient(135deg,#1a1a1a,#2e2e2e);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;color:var(--gray-40);font-size:.85rem;text-align:center;border:2px dashed var(--gray-60)}
+    .dir-tag{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--red);color:var(--white);padding:1.2rem 1.5rem;font-family:var(--fd);font-size:1rem;letter-spacing:.08em;border-radius:2px;box-shadow:0 8px 32px rgba(212,43,43,.35)}
+
+    /* CTA */
+    #cta{padding:6rem 0;background:var(--red);position:relative;overflow:hidden}
+    #cta::before{content:'MOV';position:absolute;top:50%;left:-2%;transform:translateY(-50%);font-family:var(--fd);font-size:30vw;color:rgba(0,0,0,.08);pointer-events:none;line-height:1}
+    .cta-in{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:3rem}
+    .cta-t .section-title{color:var(--white);margin-bottom:.8rem}
+    .cta-t .section-title span{color:rgba(255,255,255,.4)}
+    .cta-sub{font-size:1rem;color:rgba(255,255,255,.75);font-weight:300}
+    .btn-white{display:inline-flex;align-items:center;gap:.6rem;padding:1.1rem 2.5rem;background:var(--white);color:var(--red);font-family:var(--fb);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:.4s var(--ease);white-space:nowrap}
+    .btn-white:hover{background:var(--black);color:var(--white)}
+    .btn-white-o{display:inline-flex;align-items:center;gap:.6rem;padding:1.1rem 2.5rem;background:transparent;color:white;border:2px solid rgba(255,255,255,.5);font-family:var(--fb);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:.4s var(--ease);white-space:nowrap}
+    .btn-white-o:hover{background:rgba(255,255,255,.1)}
+
+    /* FOOTER */
+    footer{background:var(--gray-90);border-top:1px solid var(--gray-60);padding:4rem 0 2rem}
+    .ft-g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+    .ft-tg{font-size:.9rem;color:var(--gray-40);line-height:1.6;max-width:260px;margin-bottom:1.5rem}
+    .ft-soc{display:flex;gap:.8rem}
+    .ft-soc a{width:36px;height:36px;border:1px solid var(--gray-60);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gray-40);transition:all .2s}
+    .ft-soc a:hover{border-color:var(--red);color:var(--red)} .ft-soc svg{width:16px;height:16px}
+    .ft-ct{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--white);margin-bottom:1.2rem}
+    .ft-lk{display:flex;flex-direction:column;gap:.6rem}
+    .ft-lk a{font-size:.88rem;color:var(--gray-40);transition:color .2s} .ft-lk a:hover{color:var(--white)}
+    .ft-ci{font-size:.88rem;color:var(--gray-40);margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
+    .ft-ci a{color:var(--gray-40);transition:color .2s} .ft-ci a:hover{color:var(--white)}
+    .ft-bot{display:flex;justify-content:space-between;align-items:center;padding-top:2rem;border-top:1px solid var(--gray-60);gap:1rem;flex-wrap:wrap}
+    .ft-cp{font-size:12px;color:var(--gray-40)}
+
+    /* WA FLOAT */
+    .wa{position:fixed;bottom:2rem;right:2rem;z-index:200;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,.4);transition:transform .2s}
+    .wa:hover{transform:scale(1.1)} .wa svg{width:28px;height:28px;fill:white}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .srv-grid{grid-template-columns:repeat(2,1fr)}
+      .pf-grid-v{grid-template-columns:repeat(2,1fr)}
+      .ft-g{grid-template-columns:1fr 1fr}
+      .masonry{column-count:3}
+      .studio-g{grid-template-columns:1fr}
+    }
+    @media(max-width:768px){
+      nav,.h-ig,.h-cta .btn{display:none} .hamburger{display:flex}
+      .hero-cont{grid-template-columns:1fr;padding-top:80px;text-align:center}
+      .hero-ey{justify-content:center} .hero-sub{margin:0 auto 2.5rem}
+      .hero-acts{justify-content:center} .hero-stats{justify-content:center}
+      .hero-vis{display:none}
+      .about-g{grid-template-columns:1fr} .features{grid-template-columns:1fr}
+      .srv-head{flex-direction:column;align-items:flex-start}
+      .srv-grid{grid-template-columns:1fr}
+      .pf-grid-v{grid-template-columns:repeat(2,1fr)} .pf-grid-w{grid-template-columns:1fr}
+      .dep-grid{grid-template-columns:1fr}
+      .dir-g{grid-template-columns:1fr} .dir-vis{display:none}
+      .cta-in{flex-direction:column;text-align:center}
+      .ft-g{grid-template-columns:1fr;gap:2rem}
+      .masonry{column-count:2}
+      .lb-prev{left:-2rem} .lb-next{right:-2rem}
+      .gal-head{flex-direction:column;align-items:flex-start}
+      .pf-head{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<!-- MOBILE NAV -->
+<div class="mob-nav" id="mobNav">
+  <a href="#quem-somos" onclick="closeMob()">Quem Somos</a>
+  <a href="#portfolio-videos" onclick="closeMob()">Portfólio</a>
+  <a href="#galeria" onclick="closeMob()">Galeria</a>
+  <a href="#depoimentos" onclick="closeMob()">Depoimentos</a>
+  <a href="https://wa.me/5585991986159" target="_blank" style="color:var(--red)" onclick="closeMob()">Orçamento</a>
+</div>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="container">
+    <div class="h-inner">
+      <a href="#hero">
+        <img src="img/logo_branca.png" alt="MOV Produtora" height="44" />
+      </a>
+      <nav>
+        <a href="#quem-somos">Quem Somos</a>
+        <a href="#portfolio-videos">Portfólio</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#diretor">O Diretor</a>
+      </nav>
+      <div class="h-cta">
+        <a href="https://instagram.com/mov_produtora" target="_blank" class="h-ig" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          Instagram
+        </a>
+        <a href="https://wa.me/5585991986159" target="_blank" class="btn btn-p">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Orçamento
+        </a>
+        <button class="hamburger" onclick="toggleMob()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-acc"></div>
+  <div class="container">
+    <div class="hero-cont">
+      <div>
+        <div class="hero-ey"><span>Fortaleza · Ceará · Brasil</span></div>
+        <h1 class="hero-h1">IDEIAS<br>QUE VIRAM<br><em>IMAGENS.</em></h1>
+        <p class="hero-sub">Produção audiovisual corporativa, institucional e eventos. Do conceito à entrega final — conteúdo que conecta, posiciona e vende.</p>
+        <div class="hero-acts">
+          <a href="https://wa.me/5585991986159" target="_blank" class="btn btn-p">
+            <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Solicitar Orçamento
+          </a>
+          <a href="#portfolio-videos" class="btn btn-o">Ver Portfólio</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="sn">5<span>+</span></div><div class="sl">Anos de mercado</div></div>
+          <div><div class="sn">500<span>+</span></div><div class="sl">Projetos entregues</div></div>
+          <div><div class="sn">100<span>+</span></div><div class="sl">Clientes atendidos</div></div>
+        </div>
+      </div>
+      <div class="hero-vis">
+        <div style="position:relative">
+          <svg class="clapboard" viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="200" cy="330" rx="160" ry="12" fill="rgba(0,0,0,0.4)"/>
+            <rect x="30" y="80" width="340" height="240" rx="8" fill="#1a1a1a" stroke="#2e2e2e" stroke-width="2"/>
+            <line x1="30" y1="130" x2="370" y2="130" stroke="#2e2e2e" stroke-width="1.5"/>
+            <line x1="30" y1="180" x2="370" y2="180" stroke="#2e2e2e" stroke-width="1.5"/>
+            <line x1="30" y1="230" x2="370" y2="230" stroke="#2e2e2e" stroke-width="1.5"/>
+            <line x1="200" y1="130" x2="200" y2="320" stroke="#2e2e2e" stroke-width="1.5"/>
+            <text x="50" y="158" fill="#6b6b6b" font-family="monospace" font-size="11" font-weight="700" letter-spacing="2">PROD.CO.</text>
+            <text x="220" y="158" fill="#6b6b6b" font-family="monospace" font-size="11" font-weight="700" letter-spacing="2">DIRECTOR</text>
+            <text x="50" y="208" fill="#6b6b6b" font-family="monospace" font-size="11" font-weight="700" letter-spacing="2">DATE</text>
+            <text x="220" y="208" fill="#6b6b6b" font-family="monospace" font-size="11" font-weight="700" letter-spacing="2">SCENE</text>
+            <text x="50" y="258" fill="#6b6b6b" font-family="monospace" font-size="11" font-weight="700" letter-spacing="2">TAKE</text>
+            <text x="220" y="258" fill="#6b6b6b" font-family="monospace" font-size="11" font-weight="700" letter-spacing="2">ROLL</text>
+            <text x="50" y="175" fill="#b0b0b0" font-family="monospace" font-size="12">MOV Produtora</text>
+            <text x="220" y="175" fill="#b0b0b0" font-family="monospace" font-size="12">Hansley Gladberg</text>
+            <text x="50" y="225" fill="#b0b0b0" font-family="monospace" font-size="12">2025</text>
+            <text x="220" y="225" fill="#d42b2b" font-family="monospace" font-size="12" font-weight="700">01</text>
+            <text x="50" y="275" fill="#d42b2b" font-family="monospace" font-size="12" font-weight="700">01</text>
+            <text x="220" y="275" fill="#b0b0b0" font-family="monospace" font-size="12">A</text>
+            <polygon points="30,78 370,78 370,20 30,78" fill="#111111" stroke="#2e2e2e" stroke-width="1.5"/>
+            <clipPath id="cs"><polygon points="30,78 370,78 370,20 30,78"/></clipPath>
+            <g clip-path="url(#cs)">
+              <rect x="60" y="0" width="30" height="100" fill="#f5f5f0" opacity="0.9"/>
+              <rect x="120" y="0" width="30" height="100" fill="#f5f5f0" opacity="0.9"/>
+              <rect x="180" y="0" width="30" height="100" fill="#f5f5f0" opacity="0.9"/>
+              <rect x="240" y="0" width="30" height="100" fill="#f5f5f0" opacity="0.9"/>
+              <rect x="300" y="0" width="30" height="100" fill="#f5f5f0" opacity="0.9"/>
+            </g>
+            <circle cx="30" cy="78" r="6" fill="#333" stroke="#555" stroke-width="1.5"/>
+            <circle cx="357" cy="88" r="8" fill="#d42b2b"/>
+          </svg>
+          <div class="hero-badge">Fortaleza — CE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUEM SOMOS -->
+<section id="quem-somos">
+  <div class="container">
+    <div class="about-g">
+      <div class="reveal">
+        <span class="label">Quem Somos</span>
+        <h2 class="section-title">TRANSFOR<br>MAMOS<br>IDEIAS EM<br>IMAGENS<span>.</span></h2>
+      </div>
+      <div class="reveal d2">
+        <p class="about-t">Na MOV, não apenas produzimos vídeos — criamos histórias que conectam, emocionam e vendem. Seja para empresas, marcas ou profissionais, entregamos conteúdos audiovisuais estratégicos que elevam sua presença no mercado.</p>
+        <p class="about-t">Do conceito à edição final, cada projeto é pensado para causar impacto real. Trabalhamos com marcas que entendem o valor do audiovisual como ferramenta de posicionamento — não apenas comunicação.</p>
+        <a href="https://wa.me/5585991986159" target="_blank" class="btn btn-p">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Fale Conosco
+        </a>
+      </div>
+    </div>
+    <div class="features reveal">
+      <div class="feat"><div class="feat-i">🎬</div><div class="feat-t">VISÃO ESTRATÉGICA</div><p class="feat-d">Cada projeto começa com um briefing profundo. Entendemos seu negócio antes de ligar a câmera.</p></div>
+      <div class="feat"><div class="feat-i">🏆</div><div class="feat-t">EQUIPE ESPECIALIZADA</div><p class="feat-d">Videomakers, fotógrafos e social media selecionados projeto a projeto.</p></div>
+      <div class="feat"><div class="feat-i">📡</div><div class="feat-t">ENTREGA COMPLETA</div><p class="feat-d">Do roteiro à finalização, cuidamos de tudo. Você recebe o conteúdo pronto para usar.</p></div>
+      <div class="feat"><div class="feat-i">📈</div><div class="feat-t">RESULTADO REAL</div><p class="feat-d">Não fazemos vídeo bonito por fazer. Fazemos conteúdo que posiciona, engaja e converte.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTES -->
+<section id="clientes">
+  <div class="container">
+    <div class="cli-head reveal">
+      <p>Marcas que já confiaram na MOV</p>
+    </div>
+    <!--
+      COMO TROCAR POR LOGOS REAIS:
+      Dentro de cada <div class="cli-item"> substitua o <div class="cli-box">
+      por: <img src="logos/nome-cliente.png" alt="Cliente" style="height:44px;width:auto" />
+    -->
+    <div class="cli-grid reveal">
+      <div class="cli-item"><div class="cli-box">GERDAU</div></div>
+      <div class="cli-item"><div class="cli-box">UNIATENEU</div></div>
+      <div class="cli-item"><div class="cli-box">BENCH RH</div></div>
+      <div class="cli-item"><div class="cli-box">GUARARAPES</div></div>
+      <div class="cli-item"><div class="cli-box">FUTURE-SE</div></div>
+      <div class="cli-item"><div class="cli-box">GREEN MURPH</div></div>
+      <div class="cli-item"><div class="cli-box">ALPHA VILLE</div></div>
+      <div class="cli-item"><div class="cli-box">PREF. PACOTI</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STUDIO -->
+<section id="studio">
+  <div class="container">
+    <div class="studio-g">
+      <div class="reveal">
+        <span class="label">Nossa Estrutura</span>
+        <h2 class="section-title" style="margin-bottom:1.5rem">PRODUÇÃO<br>DE PONTA<span>.</span></h2>
+        <p class="studio-d">Equipamentos profissionais de captação, iluminação e áudio para garantir a qualidade técnica que seu projeto merece.</p>
+        <p class="studio-d">Seja em estúdio, na sua empresa ou em locação externa — montamos a estrutura ideal para cada tipo de produção.</p>
+        <a href="https://wa.me/5585991986159" target="_blank" class="btn btn-p" style="margin-top:.5rem">Solicitar Produção</a>
+      </div>
+      <div class="mosaic reveal d2">
+        <!-- SUBSTITUA pelas suas fotos reais de set / bastidores -->
+        <div class="mos-item tall">
+          <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=600&q=80" alt="Set de produção" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'mos-ph\'>Foto de Set</div>'" />
+        </div>
+        <div class="mos-item">
+          <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=400&q=80" alt="Câmera" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'mos-ph\'>Equipamentos</div>'" />
+        </div>
+        <div class="mos-item">
+          <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&q=80" alt="Iluminação" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'mos-ph\'>Iluminação</div>'" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="container">
+    <div class="srv-head">
+      <div class="reveal"><span class="label">O que fazemos</span><h2 class="section-title">SERVIÇOS<span>.</span></h2></div>
+      <p class="srv-intro reveal d1">Produção audiovisual completa para marcas e empresas que querem se destacar.</p>
+    </div>
+    <div class="srv-grid">
+      <div class="srv-card reveal"><div class="srv-n">01</div><div class="srv-t">VÍDEOS CORPORATIVOS</div><p class="srv-d">Conecte-se com seu público, fortaleça sua marca e transmita sua mensagem de forma profissional e impactante.</p></div>
+      <div class="srv-card reveal d1"><div class="srv-n">02</div><div class="srv-t">REDES SOCIAIS</div><p class="srv-d">Produção dinâmica e estratégica para ampliar seu alcance, engajar seu público e fortalecer sua presença online.</p></div>
+      <div class="srv-card reveal d2"><div class="srv-n">03</div><div class="srv-t">VÍDEOS PUBLICITÁRIOS</div><p class="srv-d">Produção criativa e estratégica para campanhas que envolvem, impactam e geram resultados.</p></div>
+      <div class="srv-card reveal d3"><div class="srv-n">04</div><div class="srv-t">ENTREGA REAL TIME</div><p class="srv-d">Você assiste o vídeo do seu evento antes mesmo de ele acabar. Conteúdo entregue no calor do momento.</p></div>
+      <div class="srv-card reveal d4"><div class="srv-n">05</div><div class="srv-t">COBERTURA FOTOGRÁFICA</div><p class="srv-d">Imagens profissionais que capturam a essência do seu evento, produto ou marca com qualidade e autenticidade.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO VÍDEOS -->
+<section id="portfolio-videos">
+  <div class="container">
+    <div class="pf-head">
+      <div class="reveal"><span class="label">Nosso trabalho em vídeo</span><h2 class="section-title">PORTFÓLIO<span>.</span></h2></div>
+      <a href="https://instagram.com/mov_produtora" target="_blank" class="btn btn-o reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        Ver no Instagram
+      </a>
+    </div>
+    <div class="pf-grid-v" id="pfV"></div>
+    <div class="pf-grid-w" id="pfW"></div>
+    <div style="margin-top:2.5rem;text-align:center" class="reveal">
+      <a href="https://instagram.com/mov_produtora" target="_blank" class="btn btn-p">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        Portfólio completo no Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA FOTOS -->
+<section id="galeria">
+  <div class="container">
+    <div class="gal-head">
+      <div class="reveal"><span class="label">Portfólio de fotos</span><h2 class="section-title">ALGUNS<br>CLIQUES<span>.</span></h2></div>
+      <p class="reveal d1" style="color:var(--gray-20);font-size:.95rem;max-width:320px;line-height:1.7">Bastidores, locações e momentos das nossas produções por Fortaleza e pelo Brasil.</p>
+    </div>
+    <div class="masonry reveal" id="masonry"></div>
+    <div style="text-align:center;margin-top:2.5rem" class="reveal">
+      <a href="https://instagram.com/mov_produtora" target="_blank" class="btn btn-o">Mais fotos no @mov_produtora</a>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="lbClose(event)">
+  <div class="lb-inner">
+    <button class="lb-close" onclick="lbCloseBtn()">×</button>
+    <button class="lb-nav lb-prev" onclick="lbNav(-1)">&#8249;</button>
+    <img id="lbImg" src="" alt="" />
+    <button class="lb-nav lb-next" onclick="lbNav(1)">&#8250;</button>
+    <div class="lb-cnt" id="lbCnt"></div>
+  </div>
+</div>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="container">
+    <div class="dep-head reveal"><span class="label">O que dizem</span><h2 class="section-title">DEPOIMENTOS<span>.</span></h2></div>
+    <div class="dep-grid">
+      <div class="dep-card reveal">
+        <div class="dep-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="dep-text">"A imagem é tudo na minha área, e os vídeos da MOV elevaram meu posicionamento a outro nível. Agora transmito mais confiança e autoridade para meus clientes. A qualidade e o profissionalismo fizeram toda a diferença."</p>
+        <div class="dep-auth">
+          <img src="img/advogado.jpeg" alt="Alenisio Moreira" class="dep-av" />
+          <div><div class="dep-n">Alenisio Moreira</div><div class="dep-r">Advogado</div></div>
+        </div>
+      </div>
+      <div class="dep-card reveal d1">
+        <div class="dep-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="dep-text">"Desde que começamos a produzir com o Hansley e a MOV, meu consultório ganhou mais visibilidade. Os pacientes comentam sobre a qualidade. O resultado? Mais agendamentos e mais confiança no meu trabalho."</p>
+        <div class="dep-auth">
+          <img src="img/dentista.jpeg" alt="Drª. Janayne" class="dep-av" />
+          <div><div class="dep-n">Drª. Janayne</div><div class="dep-r">Dentista</div></div>
+        </div>
+      </div>
+      <div class="dep-card reveal d2">
+        <div class="dep-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="dep-text">"No mundo do desenvolvimento pessoal, conexão é essencial. Os vídeos da MOV traduziram minha mensagem de forma autêntica e impactante, me ajudando a alcançar muito mais pessoas. Um divisor de águas para minha marca."</p>
+        <div class="dep-auth">
+          <img src="img/WhatsApp-Image-2025-03-08-at-13.13.46.jpeg" alt="George Soares" class="dep-av" />
+          <div><div class="dep-n">George Soares</div><div class="dep-r">Coach</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRETOR -->
+<section id="diretor">
+  <div class="container">
+    <div class="dir-g">
+      <div class="reveal">
+        <span class="label">Por trás da câmera</span>
+        <h2 class="section-title" style="margin-bottom:.5rem">SOBRE O<br>DIRETOR<span>.</span></h2>
+        <div class="dir-nm">Hansley Gladberg</div>
+        <div class="dir-bio">
+          <p>O audiovisual entrou na minha vida como ferramenta de expressão — e logo virou profissão. Há mais de 5 anos trabalho contando histórias que conectam pessoas, marcas e territórios, sempre buscando criar algo que vá além do óbvio.</p>
+          <p>Ao longo desse tempo, dirigi e produzi documentários, campanhas publicitárias, vídeos institucionais e conteúdos para TV. Cada projeto é um mergulho em um universo diferente.</p>
+          <p>Com uma abordagem sensível e estratégica, desenvolvo desde roteiros até a entrega final. Se a sua ideia precisa ganhar forma em imagem, som e emoção — estou pronto para fazer acontecer.</p>
+        </div>
+        <div class="dir-hl">
+          <div><div class="dir-hn">5+</div><div class="dir-hl-l">Anos de experiência</div></div>
+          <div><div class="dir-hn">TV</div><div class="dir-hl-l">Conteúdos p/ televisão</div></div>
+          <div><div class="dir-hn">NAC</div><div class="dir-hl-l">Marcas nacionais</div></div>
+        </div>
+      </div>
+      <div class="dir-vis reveal d2">
+        <div class="dir-pw">
+          <img src="img/7IV06015-1.webp" alt="Hansley Gladberg" class="dir-ph" />
+          <div class="dir-tag">Diretor · Fortaleza CE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-in">
+      <div class="cta-t reveal">
+        <h2 class="section-title">SUA MARCA<br>MERECE SER<br>VISTA<span>.</span></h2>
+        <p class="cta-sub">Entre em contato e vamos conversar sobre o seu próximo projeto audiovisual.</p>
+      </div>
+      <div class="reveal d2" style="display:flex;flex-direction:column;gap:1rem;align-items:flex-end">
+        <a href="https://wa.me/5585991986159" target="_blank" class="btn-white">
+          <svg class="ico" viewBox="0 0 24 24" fill="#d42b2b"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Falar pelo WhatsApp
+        </a>
+        <a href="/cdn-cgi/l/email-protection#1b7874756f7a6f745b76746d6b69747f6e6f74697a35787476357969" class="btn-white-o">✉ <span class="__cf_email__" data-cfemail="7714181903160318371a18010705181302031805165914181a591505">[email&#160;protected]</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="ft-g">
+      <div>
+        <svg height="38" viewBox="0 0 230 72" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:1.2rem" aria-label="MOV Produtora">
+          <text x="0" y="58" font-family="'Bebas Neue',sans-serif" font-size="64" fill="#f5f5f0" letter-spacing="1">MOV</text>
+          <circle cx="204" cy="55" r="7" fill="#d42b2b"/>
+          <text x="2" y="70" font-family="'DM Sans',sans-serif" font-size="9.5" fill="#6b6b6b" letter-spacing="9" font-weight="700">PRODUTORA</text>
+        </svg>
+        <p class="ft-tg">Produção audiovisual corporativa, institucional e eventos em Fortaleza, Ceará.</p>
+        <div class="ft-soc">
+          <a href="https://instagram.com/mov_produtora" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
+          <a href="https://wa.me/5585991986159" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+          <a href="https://youtube.com/@mov_produtora" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+          <a href="/cdn-cgi/l/email-protection#8ae9e5e4feebfee5cae7e5fcfaf8e5eefffee5f8eba4e9e5e7a4e8f8" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="ft-ct">Navegação</div>
+        <div class="ft-lk">
+          <a href="#quem-somos">Quem Somos</a><a href="#servicos">Serviços</a>
+          <a href="#portfolio-videos">Portfólio</a><a href="#galeria">Galeria</a>
+          <a href="#depoimentos">Depoimentos</a><a href="#diretor">O Diretor</a>
+        </div>
+      </div>
+      <div>
+        <div class="ft-ct">Serviços</div>
+        <div class="ft-lk">
+          <a href="#servicos">Vídeos Corporativos</a><a href="#servicos">Profissionais Liberais</a>
+          <a href="#servicos">Redes Sociais</a><a href="#servicos">Vídeos Publicitários</a>
+          <a href="#servicos">Cobertura de Eventos</a>
+        </div>
+      </div>
+      <div>
+        <div class="ft-ct">Contato</div>
+        <div class="ft-ci">📱 <a href="https://wa.me/5585991986159">(85) 99198.6159</a></div>
+        <div class="ft-ci">✉️ <a href="/cdn-cgi/l/email-protection#5f3c30312b3e2b301f3230292f2d303b2a2b302d3e713c3032713d2d"><span class="__cf_email__" data-cfemail="9dfef2f3e9fce9f2ddf0f2ebedeff2f9e8e9f2effcb3fef2f0b3ffef">[email&#160;protected]</span></a></div>
+        <div class="ft-ci">📍 Fortaleza, Ceará</div>
+        <div class="ft-ci">📸 <a href="https://instagram.com/mov_produtora" target="_blank">@mov_produtora</a></div>
+        <br>
+        <a href="https://wa.me/5585991986159" target="_blank" class="btn btn-p" style="font-size:12px;padding:.7rem 1.4rem">Falar no WhatsApp</a>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <p class="ft-cp">© 2025 MOV Produtora · Fortaleza, CE · Todos os direitos reservados</p>
+      <p class="ft-cp"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb8884859f8a9f84ab86849d9b99848f9e9f84998ac5888486c58999">[email&#160;protected]</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/5585991986159" target="_blank" class="wa" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ═══════════════════════════════════════════════════════════════════
+   📋 PORTFÓLIO — EDITE AQUI PARA ATUALIZAR O SITE
+   
+   ► Para alterar vídeos ou fotos, edite os arrays abaixo.
+   ► Salve o arquivo e reenvie para a hospedagem.
+   ► Não é necessário painel de ADM — basta editar este arquivo.
+   
+   💡 DICA — Thumbnails de vídeos do YouTube:
+      Se o link for: https://youtube.com/watch?v=ABCDE12345
+      O thumb é:     https://i.ytimg.com/vi/ABCDE12345/maxresdefault.jpg
+   
+   💡 DICA — Fotos:
+      Coloque as fotos na pasta /fotos/ e use: "fotos/meu-projeto.jpg"
+      Ou use links externos (Google Drive público, Dropbox, etc.)
+═══════════════════════════════════════════════════════════════════ */
+
+// ────────────────────────────────────────────────────
+// VÍDEOS VERTICAIS 9:16 (ex: Reels, Stories, TikTok)
+// ────────────────────────────────────────────────────
+const videosV = [
+  {
+    title: "Gerdau Cearense",
+    category: "Corporativo",
+    url: "https://www.youtube.com/@mov_produtora",
+    // thumb: "https://i.ytimg.com/vi/SEU_ID_AQUI/maxresdefault.jpg"
+  },
+  {
+    title: "Future-se",
+    category: "Institucional",
+    url: "https://www.youtube.com/@mov_produtora",
+  },
+  {
+    title: "Green Murph",
+    category: "Redes Sociais",
+    url: "https://www.youtube.com/@mov_produtora",
+  },
+  {
+    title: "D'noite Dia das Mães",
+    category: "Evento",
+    url: "https://www.youtube.com/@mov_produtora",
+  },
+];
+
+// ────────────────────────────────────────────────────
+// VÍDEOS WIDESCREEN 16:9 (ex: YouTube, TV, Cinema)
+// ────────────────────────────────────────────────────
+const videosW = [
+  { title: "High Ticket Intensive · Alpha Ville — SP", category: "Evento Corporativo", url: "https://www.youtube.com/@mov_produtora" },
+  { title: "Guararapes Vet Center",                   category: "Institucional",       url: "https://www.youtube.com/@mov_produtora" },
+  { title: "UniAteneu — Lab. de Odontologia",         category: "Institucional",       url: "https://www.youtube.com/@mov_produtora" },
+  { title: "Centro de Eventos de Fortaleza",          category: "Cobertura de Evento", url: "https://www.youtube.com/@mov_produtora" },
+  { title: "Prefeitura de Pacoti — CE",               category: "Institucional Público",url: "https://www.youtube.com/@mov_produtora" },
+  { title: "Evento Elos por Elas",                    category: "Evento",              url: "https://www.youtube.com/@mov_produtora" },
+  { title: "Bench RH",                                category: "Corporativo",         url: "https://www.youtube.com/@mov_produtora" },
+  { title: "UniAteneu 20 Anos",                       category: "Institucional",       url: "https://www.youtube.com/@mov_produtora" },
+];
+
+// ────────────────────────────────────────────────────
+// GALERIA DE FOTOS
+// Misture verticais e horizontais — o layout se ajusta.
+// Substitua pelas URLs das suas fotos reais.
+// ────────────────────────────────────────────────────
+const fotos = [
+  { src: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80", alt: "Set de filmagem" },
+  { src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80", alt: "Câmera profissional" },
+  { src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", alt: "Produção corporativa" },
+  { src: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&q=80", alt: "Iluminação de set" },
+  { src: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&q=80", alt: "Equipe de produção" },
+  { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", alt: "Evento corporativo" },
+  { src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&q=80", alt: "Gravação institucional" },
+  { src: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80", alt: "Produção de vídeo" },
+  { src: "https://images.unsplash.com/photo-1598387993441-a364f854cfb6?w=600&q=80", alt: "Bastidores de filmagem" },
+  { src: "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=800&q=80", alt: "Gravação externa" },
+  { src: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80", alt: "Cobertura de evento" },
+  { src: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80", alt: "Fotografia profissional" },
+  { src: "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=800&q=80", alt: "Produção audiovisual" },
+  { src: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&q=80", alt: "Câmera em set" },
+  { src: "https://images.unsplash.com/photo-1500210600724-f7a1eedc5fd8?w=800&q=80", alt: "Captura aérea" },
+  { src: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=800&q=80", alt: "Gravação noturna" },
+  { src: "https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&q=80", alt: "Direção de fotografia" },
+  { src: "https://images.unsplash.com/photo-1551817958-d9d86fb29431?w=800&q=80", alt: "Equipe de set" },
+  { src: "https://images.unsplash.com/photo-1522091066250-66270d5b70f8?w=600&q=80", alt: "Edição de vídeo" },
+  { src: "https://images.unsplash.com/photo-1484515991647-c5760fcecfc7?w=800&q=80", alt: "Produção em locação" },
+];
+
+/* ═══════════════════════════════════════════════════════════════════
+   CÓDIGO DO SITE — não precisa editar abaixo daqui
+═══════════════════════════════════════════════════════════════════ */
+
+// ── Render vídeos
+const playIcon = `<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`;
+function buildVid(v, cls) {
+  const hasThumb = v.thumb && v.thumb.length > 0;
+  return `<a href="${v.url}" target="_blank" class="pf-item ${cls}">
+    ${hasThumb ? `<img class="pf-thumb" src="${v.thumb}" alt="${v.title}" loading="lazy">` : `<div class="pf-ph"><span style="font-size:2rem">▶</span><span>${v.category}</span></div>`}
+    <div class="pf-ov">
+      <div class="pf-play">${playIcon}</div>
+      <div class="pf-tit">${v.title}</div>
+      <div class="pf-cat">${v.category}</div>
+    </div>
+  </a>`;
+}
+document.getElementById('pfV').innerHTML = videosV.map(v => buildVid(v,'v')).join('');
+document.getElementById('pfW').innerHTML = videosW.map(v => buildVid(v,'w')).join('');
+
+// ── Render galeria
+let curPhoto = 0;
+document.getElementById('masonry').innerHTML = fotos.map((f,i) =>
+  `<div class="mas-item" onclick="lbOpen(${i})">
+    <img src="${f.src}" alt="${f.alt}" loading="lazy">
+    <div class="mas-ov"><div class="mas-zi"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke-linecap="round"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+  </div>`).join('');
+
+// ── Lightbox
+function lbOpen(i) {
+  curPhoto = i; lbUpdate();
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function lbUpdate() {
+  const f = fotos[curPhoto];
+  document.getElementById('lbImg').src = f.src;
+  document.getElementById('lbImg').alt = f.alt;
+  document.getElementById('lbCnt').textContent = `${curPhoto+1} / ${fotos.length}`;
+}
+function lbCloseBtn() { document.getElementById('lb').classList.remove('open'); document.body.style.overflow = ''; }
+function lbClose(e) { if (e.target === document.getElementById('lb')) lbCloseBtn(); }
+function lbNav(d) { curPhoto = (curPhoto + d + fotos.length) % fotos.length; lbUpdate(); }
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lb').classList.contains('open')) return;
+  if (e.key === 'Escape') lbCloseBtn();
+  if (e.key === 'ArrowRight') lbNav(1);
+  if (e.key === 'ArrowLeft') lbNav(-1);
+});
+
+// ── Header scroll
+window.addEventListener('scroll', () => {
+assList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ── Mobile menu
+function toggleMob() {
+  document.getElementById('mobNav').classList.toggle('open');
+  document.body.style.overflow = document.getElementById('mobNav').classList.contains('open') ? 'hidden' : '';
+}
+function closeMob() {
+  document.getElementById('mobNav').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+</script>
+</body>
+</html>
