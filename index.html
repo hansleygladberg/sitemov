@@ -85,10 +85,10 @@
     .cli-head{text-align:center;margin-bottom:3rem}
     .cli-head p{font-size:.9rem;color:var(--gray-40);text-transform:uppercase;letter-spacing:.18em;font-weight:700}
     .cli-grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.5rem 3rem}
-    .cli-item{opacity:.4;transition:opacity .3s,filter .3s;filter:grayscale(1)}
-    .cli-item:hover{opacity:1;filter:grayscale(0)}
-    .cli-box{background:var(--gray-80);border:1px solid var(--gray-60);border-radius:4px;padding:.9rem 2rem;font-family:var(--fd);font-size:1.1rem;letter-spacing:.12em;color:var(--gray-40);white-space:nowrap;min-width:110px;text-align:center}
-    /* Se quiser usar imagem: <img src="logo.png" style="height:40px;width:auto" /> */
+    .cli-item{opacity:.35;transition:opacity .35s,filter .35s;filter:brightness(0) invert(1)}
+    .cli-item:hover{opacity:1;filter:none}
+    .cli-item img{height:48px;width:auto;display:block;max-width:140px;object-fit:contain}
+    .cli-item.lg img{height:68px;max-width:180px}
 
     /* STUDIO */
     #studio{padding:7rem 0;background:var(--gray-90)}
@@ -384,14 +384,18 @@
       por: <img src="logos/nome-cliente.png" alt="Cliente" style="height:44px;width:auto" />
     -->
     <div class="cli-grid reveal">
-      <div class="cli-item"><div class="cli-box">GERDAU</div></div>
-      <div class="cli-item"><div class="cli-box">UNIATENEU</div></div>
-      <div class="cli-item"><div class="cli-box">BENCH RH</div></div>
-      <div class="cli-item"><div class="cli-box">GUARARAPES</div></div>
-      <div class="cli-item"><div class="cli-box">FUTURE-SE</div></div>
-      <div class="cli-item"><div class="cli-box">GREEN MURPH</div></div>
-      <div class="cli-item"><div class="cli-box">ALPHA VILLE</div></div>
-      <div class="cli-item"><div class="cli-box">PREF. PACOTI</div></div>
+      <div class="cli-item" title="Victa Engenharia"><img src="img/logos/victa_engenharia.png" alt="Victa Engenharia" loading="lazy" /></div>
+      <div class="cli-item lg" title="Ironberg"><img src="img/logos/ironberg.webp" alt="Ironberg" loading="lazy" /></div>
+      <div class="cli-item" title="UniAteneu"><img src="img/logos/uniateneu.png" alt="UniAteneu" loading="lazy" /></div>
+      <div class="cli-item" title="Green Life"><img src="img/logos/greenlife.png" alt="Green Life" loading="lazy" /></div>
+      <div class="cli-item" title="Gerdau"><img src="img/logos/GERDAU.png" alt="Gerdau" loading="lazy" /></div>
+      <div class="cli-item" title="Aptare Tecnologia"><img src="img/logos/aptare_tecnologia.png" alt="Aptare Tecnologia" loading="lazy" /></div>
+      <div class="cli-item" title="Gomes de Matos Consultoria"><img src="img/logos/gomes_de_matos_consultoria.png" alt="Gomes de Matos Consultoria" loading="lazy" /></div>
+      <div class="cli-item" title="Guararapes Vet Center"><img src="img/logos/guararapes_vet_center.png" alt="Guararapes Vet Center" loading="lazy" /></div>
+      <div class="cli-item" title="Hospital São Raimundo"><img src="img/logos/hospital_sao_raimundo.png" alt="Hospital São Raimundo" loading="lazy" /></div>
+      <div class="cli-item" title="Performes Inovação"><img src="img/logos/performes_inovacao.png" alt="Performes Inovação" loading="lazy" /></div>
+      <div class="cli-item" title="DDR"><img src="img/logos/ddr.png" alt="DDR" loading="lazy" /></div>
+      <div class="cli-item" title="Dona Maria"><img src="img/logos/donamaria-logo.png" alt="Dona Maria" loading="lazy" /></div>
     </div>
   </div>
 </section>
@@ -690,26 +694,20 @@ const videosW = [
 // Substitua pelas URLs das suas fotos reais.
 // ────────────────────────────────────────────────────
 const fotos = [
-  { src: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80", alt: "Set de filmagem" },
-  { src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&q=80", alt: "Câmera profissional" },
-  { src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", alt: "Produção corporativa" },
-  { src: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&q=80", alt: "Iluminação de set" },
-  { src: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&q=80", alt: "Equipe de produção" },
-  { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", alt: "Evento corporativo" },
-  { src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&q=80", alt: "Gravação institucional" },
-  { src: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80", alt: "Produção de vídeo" },
-  { src: "https://images.unsplash.com/photo-1598387993441-a364f854cfb6?w=600&q=80", alt: "Bastidores de filmagem" },
-  { src: "https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=800&q=80", alt: "Gravação externa" },
-  { src: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80", alt: "Cobertura de evento" },
-  { src: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80", alt: "Fotografia profissional" },
-  { src: "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=800&q=80", alt: "Produção audiovisual" },
-  { src: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&q=80", alt: "Câmera em set" },
-  { src: "https://images.unsplash.com/photo-1500210600724-f7a1eedc5fd8?w=800&q=80", alt: "Captura aérea" },
-  { src: "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=800&q=80", alt: "Gravação noturna" },
-  { src: "https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&q=80", alt: "Direção de fotografia" },
-  { src: "https://images.unsplash.com/photo-1551817958-d9d86fb29431?w=800&q=80", alt: "Equipe de set" },
-  { src: "https://images.unsplash.com/photo-1522091066250-66270d5b70f8?w=600&q=80", alt: "Edição de vídeo" },
-  { src: "https://images.unsplash.com/photo-1484515991647-c5760fcecfc7?w=800&q=80", alt: "Produção em locação" },
+  { src: "img/fotos/MOV01207.jpg",   alt: "Produção MOV" },
+  { src: "img/fotos/MOV01243.jpg",   alt: "Produção MOV" },
+  { src: "img/fotos/MOV01686.jpg",   alt: "Produção MOV" },
+  { src: "img/fotos/MOV02015.jpg",   alt: "Produção MOV" },
+  { src: "img/fotos/MOV02888.JPG",   alt: "Bastidores" },
+  { src: "img/fotos/MOV02893.JPG",   alt: "Bastidores" },
+  { src: "img/fotos/MOV02960.jpg",   alt: "Bastidores" },
+  { src: "img/fotos/A7408251.jpg",   alt: "Set de filmagem" },
+  { src: "img/fotos/A7408412.jpg",   alt: "Set de filmagem" },
+  { src: "img/fotos/IMG_3330.JPG",   alt: "Produção" },
+  { src: "img/fotos/_REC1527.jpg",   alt: "Gravação" },
+  { src: "img/fotos/_REC1691.jpg",   alt: "Gravação" },
+  { src: "img/fotos/hans.jpg",       alt: "Diretor Hansley" },
+  { src: "img/fotos/hans2.jpg",      alt: "Diretor Hansley" },
 ];
 
 /* ═══════════════════════════════════════════════════════════════════
