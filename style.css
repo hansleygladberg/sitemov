@@ -125,7 +125,8 @@ nav a:hover{color:var(--white)}
 .gal-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;gap:2rem;flex-wrap:wrap}
 .masonry{column-count:4;column-gap:8px}
 .mas-item{break-inside:avoid;margin-bottom:8px;position:relative;overflow:hidden;border-radius:2px;cursor:pointer;background:var(--gray-80)}
-.mas-item img{width:100%;display:block;transition:transform .5s var(--ease)}
+.mas-item img{width:100%;display:block;transition:transform .5s var(--ease),opacity .4s ease;opacity:0}
+.mas-item img.loaded{opacity:1}
 .mas-item:hover img{transform:scale(1.04)}
 .mas-ov{position:absolute;inset:0;background:rgba(0,0,0,0);transition:background .3s;display:flex;align-items:center;justify-content:center}
 .mas-item:hover .mas-ov{background:rgba(0,0,0,.45)}

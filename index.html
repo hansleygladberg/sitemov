@@ -302,6 +302,7 @@
     </div>
     <div class="masonry reveal" id="masonry"></div>
     <div style="text-align:center;margin-top:2.5rem" class="reveal">
+      <button id="btn-mais-fotos" onclick="carregarMaisFotos()" class="btn btn-p" style="margin-right:1rem">Ver mais fotos</button>
       <a href="https://instagram.com/mov_produtora" target="_blank" class="btn btn-o">Mais fotos no @mov_produtora</a>
     </div>
   </div>
@@ -595,11 +596,28 @@ document.getElementById('pfW').innerHTML = videosW.map(v => buildVid(v,'w')).joi
 
 // ── Render galeria
 let curPhoto = 0;
-document.getElementById('masonry').innerHTML = fotos.map((f,i) =>
-  `<div class="mas-item" onclick="lbOpen(${i})">
-    <img src="${f.src}" alt="${f.alt}" loading="lazy">
+const FOTOS_INICIAL = 8;
+let fotosVisiveis = FOTOS_INICIAL;
+
+function buildFotoItem(f, i) {
+  return `<div class="mas-item" onclick="lbOpen(${i})">
+    <img src="${f.src}" alt="${f.alt}" loading="lazy" onload="this.classList.add('loaded')">
     <div class="mas-ov"><div class="mas-zi"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke-linecap="round"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
-  </div>`).join('');
+  </div>`;
+}
+
+function renderGaleria() {
+  document.getElementById('masonry').innerHTML = fotos.slice(0, fotosVisiveis).map((f,i) => buildFotoItem(f,i)).join('');
+  const btn = document.getElementById('btn-mais-fotos');
+  if (btn) btn.style.display = fotosVisiveis >= fotos.length ? 'none' : 'inline-flex';
+}
+
+function carregarMaisFotos() {
+  fotosVisiveis = Math.min(fotosVisiveis + 8, fotos.length);
+  renderGaleria();
+}
+
+renderGaleria();
 
 // ── Lightbox
 function lbOpen(i) {
