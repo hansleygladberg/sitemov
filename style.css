@@ -275,6 +275,10 @@ footer{background:var(--gray-90);border-top:1px solid var(--gray-60);padding:4re
 
 /* ARTICLE */
 .article-wrap{max-width:760px;margin:0 auto;padding:4rem 0 6rem}
+.article-cover{background:var(--black);padding:2rem 0 0}
+.article-cover-media{max-width:980px;margin:0 auto;border:1px solid var(--gray-60);border-radius:2px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.35)}
+.article-cover-media img{display:block;width:100%;height:min(56vw,520px);object-fit:cover}
+.article-cover-media figcaption{font-size:.8rem;color:var(--gray-40);padding:.75rem 1rem;background:var(--gray-90);border-top:1px solid var(--gray-60)}
 .article-wrap h2{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,2.5rem);line-height:1;margin:2.5rem 0 1rem;color:var(--white)}
 .article-wrap h3{font-family:var(--fd);font-size:1.4rem;letter-spacing:.03em;margin:2rem 0 .8rem;color:var(--white)}
 .article-wrap p{font-size:1rem;font-weight:300;color:var(--gray-20);line-height:1.85;margin-bottom:1.3rem}
