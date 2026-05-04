@@ -626,8 +626,10 @@ function buildVid(v, cls) {
     ${hasThumb ? `<img class="pf-thumb" src="${v.thumb}" alt="${v.title}" loading="lazy">` : `<div class="pf-ph"><span style="font-size:2rem">▶</span><span>${v.category}</span></div>`}
     <div class="pf-ov">
       <div class="pf-play">${playIcon}</div>
-      <div class="pf-tit">${v.title}</div>
-      <div class="pf-cat">${v.category}</div>
+      <div class="pf-info">
+        <div class="pf-cat">${v.category}</div>
+        <div class="pf-tit">${v.title}</div>
+      </div>
     </div>
   </a>`;
 }
