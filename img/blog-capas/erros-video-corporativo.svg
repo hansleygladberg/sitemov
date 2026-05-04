@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="ERROS NO VIDEO CORPORATIVO">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1008"/>
+      <stop offset="100%" stop-color="#1f1a10"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.22" r="0.58">
+      <stop offset="0%" stop-color="#F5A623" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#F5A623" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g opacity="0.15" stroke="#ffffff" stroke-width="1.5" fill="none">
+    <path d="M-100 760 C 280 580, 580 840, 1000 640 C 1240 510, 1440 590, 1740 410"/>
+    <path d="M-160 840 C 220 660, 520 900, 960 710 C 1260 570, 1380 700, 1760 520"/>
+  </g>
+  <circle cx="1330" cy="185" r="72" fill="#F5A623" opacity="0.85"/>
+  <circle cx="1330" cy="185" r="36" fill="#ffffff" opacity="0.12"/>
+  <rect x="120" y="130" width="260" height="50" rx="8" fill="#ffffff" opacity="0.08"/>
+  <text x="145" y="163" font-family="'DM Sans', Arial, sans-serif" font-size="26" fill="#f5f5f0" letter-spacing="1.5">7 ERROS</text>
+  <text x="120" y="590" font-family="'Bebas Neue', Impact, sans-serif" font-size="128" fill="#f5f5f0" letter-spacing="2">ERROS NO</text>
+  <text x="120" y="700" font-family="'Bebas Neue', Impact, sans-serif" font-size="128" fill="#F5A623" letter-spacing="2">VIDEO</text>
+  <text x="120" y="810" font-family="'DM Sans', Arial, sans-serif" font-size="30" fill="#d8d8d8">MOV PRODUTORA · FORTALEZA</text>
+</svg>
