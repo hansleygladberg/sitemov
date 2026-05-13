@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="TRANSMISSÃO AO VIVO">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0d14"/>
+      <stop offset="100%" stop-color="#1a0a0a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.75" cy="0.22" r="0.55">
+      <stop offset="0%" stop-color="#e5133a" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#e5133a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g opacity="0.12" stroke="#ffffff" stroke-width="2" fill="none">
+    <path d="M-80 720 C 240 560, 560 840, 980 660 C 1200 560, 1440 610, 1720 460"/>
+    <path d="M-100 810 C 200 650, 500 950, 950 750 C 1250 610, 1390 740, 1760 570"/>
+  </g>
+  <!-- Live dot + badge -->
+  <circle cx="1340" cy="190" r="74" fill="#e5133a" opacity="0.92"/>
+  <circle cx="1340" cy="190" r="36" fill="#ffffff" opacity="0.18"/>
+  <text x="1295" y="202" font-family="'DM Sans', Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="2">LIVE</text>
+  <!-- Tag -->
+  <rect x="120" y="130" width="420" height="52" rx="8" fill="#ffffff" opacity="0.08"/>
+  <text x="145" y="165" font-family="'DM Sans', Arial, sans-serif" font-size="28" fill="#f5f5f0" letter-spacing="1.5">STREAMING</text>
+  <!-- Title -->
+  <text x="120" y="590" font-family="'Bebas Neue', Impact, sans-serif" font-size="132" fill="#f5f5f0" letter-spacing="2">TRANSMISSÃO</text>
+  <text x="120" y="700" font-family="'Bebas Neue', Impact, sans-serif" font-size="132" fill="#e5133a" letter-spacing="2">AO VIVO</text>
+  <text x="120" y="810" font-family="'DM Sans', Arial, sans-serif" font-size="32" fill="#d8d8d8">MOV PRODUTORA · FORTALEZA</text>
+</svg>
