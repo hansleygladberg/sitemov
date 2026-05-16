@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="STORYMAKER">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0a16"/>
+      <stop offset="100%" stop-color="#150a1a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.2" r="0.58">
+      <stop offset="0%" stop-color="#c026d3" stop-opacity="0.52"/>
+      <stop offset="100%" stop-color="#c026d3" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ig" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f09433"/>
+      <stop offset="25%" stop-color="#e6683c"/>
+      <stop offset="50%" stop-color="#dc2743"/>
+      <stop offset="75%" stop-color="#cc2366"/>
+      <stop offset="100%" stop-color="#bc1888"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g opacity="0.11" stroke="#ffffff" stroke-width="2" fill="none">
+    <path d="M-80 720 C 240 560, 540 840, 980 660 C 1200 560, 1440 620, 1720 460"/>
+    <path d="M-100 810 C 200 650, 480 950, 950 750 C 1250 610, 1390 740, 1760 570"/>
+  </g>
+  <!-- Phone icon -->
+  <rect x="1270" y="120" width="140" height="140" rx="28" fill="url(#ig)" opacity="0.95"/>
+  <rect x="1293" y="143" width="94" height="94" rx="16" fill="none" stroke="white" stroke-width="7"/>
+  <circle cx="1340" cy="190" r="24" fill="none" stroke="white" stroke-width="7"/>
+  <circle cx="1375" cy="155" r="8" fill="white"/>
+  <!-- Tag line -->
+  <rect x="120" y="130" width="480" height="52" rx="8" fill="#ffffff" opacity="0.08"/>
+  <text x="145" y="165" font-family="'DM Sans', Arial, sans-serif" font-size="28" fill="#f5f5f0" letter-spacing="1.5">REDES SOCIAIS EM TEMPO REAL</text>
+  <!-- Title -->
+  <text x="120" y="590" font-family="'Bebas Neue', Impact, sans-serif" font-size="132" fill="#f5f5f0" letter-spacing="2">STORY</text>
+  <text x="120" y="700" font-family="'Bebas Neue', Impact, sans-serif" font-size="132" fill="url(#ig)" letter-spacing="2">MAKER</text>
+  <text x="120" y="810" font-family="'DM Sans', Arial, sans-serif" font-size="32" fill="#d8d8d8">MOV PRODUTORA · FORTALEZA</text>
+</svg>
