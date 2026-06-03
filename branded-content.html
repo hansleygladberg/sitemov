@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branded Content para Marcas Corporativas | MOV Produtora</title>
+  <meta name="description" content="Branded content e vídeos publicitários para marcas corporativas. Direção autoral, conceito estratégico e execução premium. MOV Produtora, Fortaleza." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.movprodutora.com.br/branded-content" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.movprodutora.com.br/branded-content" />
+  <meta property="og:title" content="Branded Content para Marcas Corporativas | MOV Produtora" />
+  <meta property="og:description" content="Branded content e vídeos publicitários para marcas corporativas. Direção autoral, conceito estratégico, execução premium." />
+  <meta property="og:image" content="https://movprodutora.com.br/img/logo_branca.png" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RPJ90GVQ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0RPJ90GVQ8');
+  </script>
+  <!-- UTM Capture -->
+  <script>
+  (function(){
+    var p = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+      if(p.has(k)) sessionStorage.setItem(k, p.get(k));
+    });
+  })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/FAVICON-MOV.png" type="image/png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a; --g90: #111111; --g80: #1a1a1a; --g60: #2e2e2e;
+      --g40: #6b6b6b; --g20: #b0b0b0; --white: #f5f5f0; --red: #d42b2b;
+      --gold: #C9A961; --fd: 'Bebas Neue', sans-serif; --fb: 'DM Sans', sans-serif;
+      --ease: cubic-bezier(0.16,1,0.3,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: var(--fb); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+    img  { display: block; max-width: 100%; }
+    a    { text-decoration: none; color: inherit; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+    .lp-container { width: min(1100px, 92vw); margin: 0 auto; }
+    .lp-label     { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: .9rem; }
+    .lp-btn       { display: inline-flex; align-items: center; gap: .6rem; padding: .9rem 2rem; font-family: var(--fb); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; cursor: pointer; transition: .3s var(--ease); border: 2px solid var(--gold); background: var(--gold); color: var(--black); }
+    .lp-btn:hover { background: transparent; color: var(--gold); }
+    .lp-btn-o     { background: transparent; color: var(--white); border-color: rgba(245,245,240,.3); }
+    .lp-btn-o:hover { border-color: var(--white); }
+    .lp-section   { padding: 6rem 0; }
+    .lp-section-alt { background: var(--g90); }
+    .lp-reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+    .lp-reveal.lp-vis { opacity: 1; transform: none; }
+    .lp-d1 { transition-delay: .1s; } .lp-d2 { transition-delay: .2s; } .lp-d3 { transition-delay: .3s; }
+
+    /* TOPBAR */
+    .lp-topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 0; background: rgba(10,10,10,.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--g60); }
+    .lp-topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .lp-wa-btn { display: inline-flex; align-items: center; gap: .5rem; font-size: 13px; font-weight: 600; color: var(--g20); transition: color .2s; }
+    .lp-wa-btn svg { width: 18px; height: 18px; }
+    .lp-wa-btn:hover { color: var(--white); }
+    .lp-topbar-cta { display: flex; align-items: center; gap: 1rem; }
+
+    /* HERO */
+    #lp-hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
+    .lp-hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, var(--black) 0%, #0a0d0a 100%); }
+    .lp-hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 30%, rgba(201,169,97,.1) 0%, transparent 60%); }
+    .lp-hero-grid { position: absolute; inset: 0; opacity: .03; background-image: linear-gradient(var(--g60) 1px, transparent 1px), linear-gradient(90deg, var(--g60) 1px, transparent 1px); background-size: 80px 80px; }
+    .lp-hero-content { position: relative; z-index: 2; padding: 120px 0 80px; max-width: 780px; }
+    .lp-hero-eyebrow { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+    .lp-hero-eyebrow::before { content: ''; display: block; width: 40px; height: 2px; background: var(--gold); }
+    .lp-hero-eyebrow span { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+    .lp-hero-h1 { font-family: var(--fd); font-size: clamp(2.4rem, 5vw, 5rem); line-height: .95; margin-bottom: 1.8rem; }
+    .lp-hero-h1 em { font-style: normal; color: var(--gold); }
+    .lp-hero-sub { font-size: 1.05rem; font-weight: 300; color: var(--g20); max-width: 560px; line-height: 1.75; margin-bottom: 2.5rem; }
+    .lp-hero-acts { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+
+    /* DIFERENÇA */
+    #lp-diff { padding: 6rem 0; background: var(--g90); }
+    .lp-diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--g60); border: 1px solid var(--g60); margin-top: 3.5rem; }
+    .lp-diff-col { padding: 3rem 2.5rem; }
+    .lp-diff-col:first-child { background: var(--g80); border-right: none; }
+    .lp-diff-col:last-child { background: var(--black); position: relative; overflow: hidden; }
+    .lp-diff-col:last-child::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); }
+    .lp-diff-tag { font-size: 10px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--g40); margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--g60); }
+    .lp-diff-col:last-child .lp-diff-tag { color: var(--gold); }
+    .lp-diff-items { display: flex; flex-direction: column; gap: 1.2rem; }
+    .lp-diff-item { display: flex; align-items: flex-start; gap: .8rem; }
+    .lp-diff-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--g40); flex-shrink: 0; margin-top: .5rem; }
+    .lp-diff-col:last-child .lp-diff-dot { background: var(--gold); }
+    .lp-diff-item-t { font-size: .88rem; font-weight: 500; color: var(--g20); margin-bottom: .2rem; }
+    .lp-diff-col:last-child .lp-diff-item-t { color: var(--white); }
+    .lp-diff-item-d { font-size: .82rem; font-weight: 300; color: var(--g40); line-height: 1.6; }
+    .lp-diff-col:last-child .lp-diff-item-d { color: var(--g20); }
+
+    /* QUANDO FAZ SENTIDO */
+    #lp-quando { padding: 6rem 0; }
+    .lp-quando-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--g60); border: 1px solid var(--g60); margin-top: 3.5rem; }
+    .lp-quando-item { background: var(--black); padding: 2rem 1.75rem; transition: background .3s; position: relative; overflow: hidden; }
+    .lp-quando-item:hover { background: var(--g90); }
+    .lp-quando-item::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .35s var(--ease); }
+    .lp-quando-item:hover::after { transform: scaleX(1); }
+    .lp-quando-n { font-family: var(--fd); font-size: 2.5rem; color: var(--g60); line-height: 1; margin-bottom: 1rem; transition: color .3s; }
+    .lp-quando-item:hover .lp-quando-n { color: var(--gold); }
+    .lp-quando-t { font-size: .9rem; font-weight: 500; color: var(--white); line-height: 1.4; margin-bottom: .5rem; }
+    .lp-quando-d { font-size: .82rem; font-weight: 300; color: var(--g20); line-height: 1.65; }
+
+    /* PROCESSO */
+    #lp-processo { padding: 6rem 0; background: var(--g90); }
+    .lp-processo-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--g60); border: 1px solid var(--g60); margin-top: 3.5rem; }
+    .lp-step { background: var(--black); padding: 2.5rem 2rem; position: relative; overflow: hidden; transition: background .3s; }
+    .lp-step:hover { background: var(--g80); }
+    .lp-step-bar { position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+    .lp-step:hover .lp-step-bar { transform: scaleX(1); }
+    .lp-step-n { font-family: var(--fd); font-size: 4rem; line-height: 1; color: var(--g60); margin-bottom: 1rem; transition: color .3s; }
+    .lp-step:hover .lp-step-n { color: var(--gold); }
+    .lp-step-t { font-family: var(--fd); font-size: 1.2rem; letter-spacing: .08em; color: var(--white); margin-bottom: .6rem; }
+    .lp-step-d { font-size: .82rem; font-weight: 300; color: var(--g20); line-height: 1.65; }
+
+    /* PROVA SOCIAL */
+    #lp-prova { padding: 3.5rem 0; border-top: 1px solid var(--g60); border-bottom: 1px solid var(--g60); }
+    .lp-prova-label { text-align: center; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--g40); margin-bottom: 2rem; }
+    .lp-logos { display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+    .lp-logo-img { height: 40px; width: auto; opacity: .45; filter: brightness(0) invert(1); transition: opacity .2s; }
+    .lp-logo-img:hover { opacity: .85; }
+
+    /* FORMULÁRIO */
+    #lp-form { padding: 6rem 0; background: var(--g90); }
+    .lp-form-wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
+    .lp-form-intro h2 { font-family: var(--fd); font-size: clamp(2rem, 4vw, 3.2rem); line-height: .95; margin-bottom: 1.2rem; }
+    .lp-form-intro h2 em { font-style: normal; color: var(--gold); }
+    .lp-form-intro p { font-size: .92rem; font-weight: 300; color: var(--g20); line-height: 1.75; margin-bottom: 2rem; }
+    .lp-form-trust { display: flex; flex-direction: column; gap: .7rem; }
+    .lp-form-trust-item { display: flex; align-items: center; gap: .7rem; font-size: .82rem; color: var(--g40); }
+    .lp-form-trust-item::before { content: ''; display: block; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+    .lp-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .lp-form-full { grid-column: 1 / -1; }
+    .lp-field { display: flex; flex-direction: column; gap: .4rem; }
+    .lp-field label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--g40); }
+    .lp-field input, .lp-field select, .lp-field textarea { background: var(--g80); border: 1px solid var(--g60); color: var(--white); font-family: var(--fb); font-size: .9rem; font-weight: 300; padding: .85rem 1rem; border-radius: 2px; outline: none; transition: border-color .2s; width: 100%; appearance: none; }
+    .lp-field input:focus, .lp-field select:focus, .lp-field textarea:focus { border-color: var(--gold); }
+    .lp-field select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6b6b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+    .lp-field select option { background: var(--g80); }
+    .lp-field textarea { resize: vertical; min-height: 90px; }
+    .lp-form-submit { grid-column: 1 / -1; display: flex; flex-direction: column; gap: .8rem; align-items: flex-start; margin-top: .5rem; }
+    .lp-privacy { font-size: 11px; color: var(--g40); line-height: 1.5; }
+
+    /* FOOTER */
+    .lp-footer { padding: 2.5rem 0; border-top: 1px solid var(--g60); }
+    .lp-footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .lp-footer-links { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+    .lp-footer-link { font-size: 12px; color: var(--g40); letter-spacing: .08em; transition: color .2s; }
+    .lp-footer-link:hover { color: var(--white); }
+    .lp-footer-back { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--g20); border: 1px solid var(--g60); padding: .4rem 1rem; border-radius: 2px; transition: color .2s, border-color .2s; }
+    .lp-footer-back:hover { color: var(--white); border-color: var(--g40); }
+
+    @media (max-width: 1024px) {
+      .lp-diff-grid { grid-template-columns: 1fr; }
+      .lp-quando-grid { grid-template-columns: 1fr 1fr; }
+      .lp-processo-steps { grid-template-columns: 1fr 1fr; }
+      .lp-form-wrap { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    @media (max-width: 768px) {
+      .lp-section, #lp-hero, #lp-diff, #lp-quando, #lp-processo, #lp-prova, #lp-form { padding: 4rem 0; }
+      .lp-hero-content { padding-top: 90px; }
+      .lp-quando-grid { grid-template-columns: 1fr; }
+      .lp-processo-steps { grid-template-columns: 1fr; }
+      .lp-form { grid-template-columns: 1fr; }
+      .lp-form-full { grid-column: 1; }
+      .lp-topbar-cta .lp-btn { display: none; }
+      .lp-logos { gap: 1.5rem; }
+      .lp-footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="lp-topbar" id="lpHdr">
+  <div class="lp-container">
+    <div class="lp-topbar-inner">
+      <a href="/" aria-label="MOV Produtora">
+        <svg height="32" viewBox="0 0 230 72" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="58" font-family="'Bebas Neue',sans-serif" font-size="64" fill="#f5f5f0" letter-spacing="1">MOV</text>
+          <circle cx="204" cy="55" r="7" fill="#d42b2b"/>
+          <text x="2" y="70" font-family="'DM Sans',sans-serif" font-size="9.5" fill="#6b6b6b" letter-spacing="9" font-weight="700">PRODUTORA</text>
+        </svg>
+      </a>
+      <div class="lp-topbar-cta">
+        <a href="https://wa.me/5585991986159?text=Ol%C3%A1%2C%20vim%20da%20p%C3%A1gina%20de%20Branded%20Content%20da%20MOV%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
+           target="_blank" class="lp-wa-btn"
+           onclick="gtag('event','whatsapp_click',{landing:'branded-content'})">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+        <a href="#lp-form" class="lp-btn">Agendar conversa</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="lp-hero">
+  <div class="lp-hero-bg"></div>
+  <div class="lp-hero-grid"></div>
+  <div class="lp-container">
+    <div class="lp-hero-content">
+      <div class="lp-hero-eyebrow"><span>Direção autoral · Conceito estratégico</span></div>
+      <h1 class="lp-hero-h1">
+        Branded content para marcas que<br>precisam de <em>percepção</em> —<br>não só alcance.
+      </h1>
+      <p class="lp-hero-sub">
+        Vídeos publicitários, séries de conteúdo e campanhas audiovisuais para marcas corporativas.
+        Direção autoral, conceito estratégico, execução premium.
+      </p>
+      <div class="lp-hero-acts">
+        <a href="#lp-form" class="lp-btn">Agendar conversa estratégica</a>
+        <a href="#lp-diff" class="lp-btn lp-btn-o">Entender o método</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENÇA -->
+<section id="lp-diff" class="lp-section lp-section-alt">
+  <div class="lp-container">
+    <div class="lp-reveal">
+      <span class="lp-label">O que separa os dois</span>
+      <h2 style="font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);margin-top:.3rem;line-height:.95">Publicidade interrompe.<br><em style="font-style:normal;color:var(--gold)">Branded content conquista.</em></h2>
+    </div>
+    <div class="lp-diff-grid lp-reveal">
+      <div class="lp-diff-col">
+        <div class="lp-diff-tag">Publicidade tradicional</div>
+        <div class="lp-diff-items">
+          <div class="lp-diff-item">
+            <div class="lp-diff-dot"></div>
+            <div><div class="lp-diff-item-t">Interrompe</div><div class="lp-diff-item-d">O público tolera, não escolhe assistir.</div></div>
+          </div>
+          <div class="lp-diff-item">
+            <div class="lp-diff-dot"></div>
+            <div><div class="lp-diff-item-t">Comunica o produto</div><div class="lp-diff-item-d">O foco é o que a marca vende.</div></div>
+          </div>
+          <div class="lp-diff-item">
+            <div class="lp-diff-dot"></div>
+            <div><div class="lp-diff-item-t">Funciona por repetição</div><div class="lp-diff-item-d">Quanto mais veiculação, mais lembrança. Sem frequência, desaparece.</div></div>
+          </div>
+          <div class="lp-diff-item">
+            <div class="lp-diff-dot"></div>
+            <div><div class="lp-diff-item-t">Métrica: alcance</div><div class="lp-diff-item-d">Quantas pessoas viram. Não o que sentiram.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="lp-diff-col">
+        <div class="lp-diff-tag">Branded Content — MOV</div>
+        <div class="lp-diff-items">
+          <div class="lp-diff-item">
+            <div class="lp-diff-dot"></div>
+            <div><div class="lp-diff-item-t">Conquista</div><div class="lp-diff-item-d">O público escolhe assistir. Compartilha. Associa à marca.</div></div>
+          </div>
+          <div class="lp-diff-item">
+            <div class="lp-diff-dot"></div>
+            <div><div class="lp-diff-item-t">Comunica os valores da marca</div><div class="lp-diff-item-d">O foco é o que a marca representa e no que acredita.</div></div>
+          </div>
+          <div class="lp-diff-item">
+            <div class="lp-diff-dot"></div>
+            <div><div class="lp-diff-item-t">Funciona por relevância</div><div class="lp-diff-item-d">Um único conteúdo certo gera mais percepção do que mil impressões genéricas.</div></div>
+          </div>
+          <div class="lp-diff-item">
+            <div class="lp-diff-dot"></div>
+            <div><div class="lp-diff-item-t">Métrica: percepção</div><div class="lp-diff-item-d">O que o público passou a sentir e associar à marca.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUANDO FAZ SENTIDO -->
+<section id="lp-quando" class="lp-section">
+  <div class="lp-container">
+    <div class="lp-reveal">
+      <span class="lp-label">Para sua marca</span>
+      <h2 style="font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);margin-top:.3rem;line-height:.95">Quando branded content<br><em style="font-style:normal;color:var(--gold)">faz sentido para você.</em></h2>
+    </div>
+    <div class="lp-quando-grid lp-reveal">
+      <div class="lp-quando-item">
+        <div class="lp-quando-n">01</div>
+        <div class="lp-quando-t">Lançamento de marca ou reposicionamento</div>
+        <p class="lp-quando-d">Quando a marca precisa comunicar uma mudança ou apresentar uma nova identidade ao mercado com narrativa, não só visual.</p>
+      </div>
+      <div class="lp-quando-item">
+        <div class="lp-quando-n">02</div>
+        <div class="lp-quando-t">Campanha de aniversário ou marco corporativo</div>
+        <p class="lp-quando-d">Datas que merecem mais do que um post. Marcos que constroem legado quando bem comunicados.</p>
+      </div>
+      <div class="lp-quando-item">
+        <div class="lp-quando-n">03</div>
+        <div class="lp-quando-t">Comunicação de propósito</div>
+        <p class="lp-quando-d">Sustentabilidade, impacto social, diversidade. Temas que exigem autenticidade — ou não funcionam.</p>
+      </div>
+      <div class="lp-quando-item">
+        <div class="lp-quando-n">04</div>
+        <div class="lp-quando-t">Conteúdo para mídia paga</div>
+        <p class="lp-quando-d">Campanhas em redes sociais, YouTube e OOH que precisam de peças que gerem percepção além de clique.</p>
+      </div>
+      <div class="lp-quando-item">
+        <div class="lp-quando-n">05</div>
+        <div class="lp-quando-t">Série de conteúdo para LinkedIn ou YouTube</div>
+        <p class="lp-quando-d">Estratégia de conteúdo recorrente para marcas que querem construir autoridade de forma consistente.</p>
+      </div>
+      <div class="lp-quando-item">
+        <div class="lp-quando-n">06</div>
+        <div class="lp-quando-t">Comunicação interna estratégica</div>
+        <p class="lp-quando-d">Quando a cultura da empresa precisa ser transmitida com a mesma qualidade das comunicações externas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section id="lp-processo" class="lp-section lp-section-alt">
+  <div class="lp-container">
+    <div class="lp-reveal">
+      <span class="lp-label">Nosso processo</span>
+      <h2 style="font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);margin-top:.3rem;line-height:.95">Quatro etapas.<br><em style="font-style:normal;color:var(--gold)">Uma decisão criativa central.</em></h2>
+    </div>
+    <div class="lp-processo-steps lp-reveal">
+      <div class="lp-step">
+        <div class="lp-step-bar"></div>
+        <div class="lp-step-n">01</div>
+        <div class="lp-step-t">IMERSÃO NA MARCA</div>
+        <p class="lp-step-d">Entendemos posicionamento, audiência e tensão estratégica. Qual é o problema real de comunicação que este conteúdo precisa resolver.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step-bar"></div>
+        <div class="lp-step-n">02</div>
+        <div class="lp-step-t">CONCEITO AUTORAL</div>
+        <p class="lp-step-d">Decisão criativa única e alinhada com a identidade da marca. Nenhuma peça começa sem que o conceito esteja validado.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step-bar"></div>
+        <div class="lp-step-n">03</div>
+        <div class="lp-step-t">PRODUÇÃO PREMIUM</div>
+        <p class="lp-step-d">Equipe, equipamento e direção de padrão publicitário. Cada decisão técnica serve à decisão criativa, não o contrário.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step-bar"></div>
+        <div class="lp-step-n">04</div>
+        <div class="lp-step-t">ENTREGA MULTICANAL</div>
+        <p class="lp-step-d">Versões para TV, redes sociais, mídia paga e OOH. Um conceito, múltiplos formatos, coerência de marca em todos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section id="lp-prova">
+  <div class="lp-container">
+    <p class="lp-prova-label lp-reveal">Branded content para marcas como</p>
+    <div class="lp-logos lp-reveal">
+      <img src="img/logos/GERDAU.png"        alt="Gerdau"    class="lp-logo-img" loading="lazy" />
+      <img src="img/logos/uniateneu.png"     alt="UniAteneu" class="lp-logo-img" loading="lazy" />
+      <img src="img/logos/ironberg.webp"     alt="Ironberg"  class="lp-logo-img" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁRIO -->
+<section id="lp-form" class="lp-section lp-section-alt">
+  <div class="lp-container">
+    <div id="lp-form-content">
+      <div class="lp-form-wrap">
+        <div class="lp-form-intro lp-reveal">
+          <span class="lp-label">Próximo passo</span>
+          <h2>Vamos conversar sobre sua <em>próxima campanha.</em></h2>
+          <p>Preencha os dados abaixo. Nossa equipe entra em contato em até 24h para agendar uma conversa estratégica sobre o projeto.</p>
+          <div class="lp-form-trust">
+            <div class="lp-form-trust-item">Direção autoral com conceito estratégico</div>
+            <div class="lp-form-trust-item">Entrega em todos os formatos e canais</div>
+            <div class="lp-form-trust-item">Clientes em todo o Brasil</div>
+          </div>
+        </div>
+        <div class="lp-reveal lp-d1">
+          <!-- TODO: substituir FORMSPREE_ID pelo endpoint real em https://formspree.io -->
+          <form class="lp-form" id="lpFormBC"
+                action="https://formspree.io/f/FORMSPREE_ID"
+                method="POST">
+
+            <input type="hidden" name="utm_source"   id="bc_utm_source">
+            <input type="hidden" name="utm_medium"   id="bc_utm_medium">
+            <input type="hidden" name="utm_campaign" id="bc_utm_campaign">
+            <input type="hidden" name="utm_content"  id="bc_utm_content">
+            <input type="hidden" name="utm_term"     id="bc_utm_term">
+            <input type="hidden" name="landing_page" value="branded-content">
+
+            <div class="lp-field">
+              <label>Nome completo *</label>
+              <input type="text" name="nome" required placeholder="Seu nome" />
+            </div>
+            <div class="lp-field">
+              <label>Empresa *</label>
+              <input type="text" name="empresa" required placeholder="Nome da empresa" />
+            </div>
+            <div class="lp-field">
+              <label>Cargo *</label>
+              <input type="text" name="cargo" required placeholder="Ex: Diretora de Marketing" />
+            </div>
+            <div class="lp-field">
+              <label>E-mail corporativo *</label>
+              <input type="email" name="email" required placeholder="voce@empresa.com.br" />
+            </div>
+            <div class="lp-field lp-form-full">
+              <label>WhatsApp *</label>
+              <input type="tel" name="whatsapp" required placeholder="(85) 99999-9999" />
+            </div>
+            <div class="lp-field">
+              <label>Tipo de projeto *</label>
+              <select name="tipo_projeto" required>
+                <option value="" disabled selected>Selecione</option>
+                <option>Vídeo de campanha</option>
+                <option>Série de branded content</option>
+                <option>Filme de marca</option>
+                <option>Conteúdo para mídia paga</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="lp-field">
+              <label>Faixa de investimento</label>
+              <select name="investimento">
+                <option value="" disabled selected>Selecione</option>
+                <option>Até R$10k</option>
+                <option>R$10k – R$25k</option>
+                <option>R$25k – R$50k</option>
+                <option>R$50k+</option>
+                <option>A definir</option>
+              </select>
+            </div>
+            <div class="lp-field lp-form-full">
+              <label>Mensagem (opcional)</label>
+              <textarea name="mensagem" placeholder="Conte brevemente sobre a campanha ou o objetivo da marca..."></textarea>
+            </div>
+            <div class="lp-form-submit">
+              <button type="submit" class="lp-btn">Agendar conversa estratégica</button>
+              <p class="lp-privacy">Seus dados são confidenciais e usados apenas para contato comercial.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="lp-form-success" style="display:none;text-align:center;padding:4rem 2rem">
+      <div style="width:48px;height:48px;border-radius:50%;background:rgba(201,169,97,.12);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 style="font-family:var(--fd);font-size:2.5rem;margin-bottom:1rem">Mensagem recebida.</h3>
+      <p style="color:var(--g20);font-weight:300;margin-bottom:2rem">Nossa equipe retorna em até 24h para agendar uma conversa sobre sua campanha.</p>
+      <a href="/" class="lp-btn lp-btn-o">Voltar para o site</a>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="lp-footer">
+  <div class="lp-container">
+    <div class="lp-footer-inner">
+      <svg height="28" viewBox="0 0 230 72" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="58" font-family="'Bebas Neue',sans-serif" font-size="64" fill="#f5f5f0" letter-spacing="1">MOV</text>
+        <circle cx="204" cy="55" r="7" fill="#d42b2b"/>
+        <text x="2" y="70" font-family="'DM Sans',sans-serif" font-size="9.5" fill="#6b6b6b" letter-spacing="9" font-weight="700">PRODUTORA</text>
+      </svg>
+      <div class="lp-footer-links">
+        <a href="mailto:contato@movprodutora.com.br" class="lp-footer-link">contato@movprodutora.com.br</a>
+        <a href="https://wa.me/5585991986159" target="_blank" class="lp-footer-link">(85) 99198.6159</a>
+      </div>
+      <a href="/" class="lp-footer-back">← Voltar para movprodutora.com.br</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.lp-reveal');
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('lp-vis'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  els.forEach(function(el){ obs.observe(el); });
+})();
+
+document.getElementById('lpFormBC').addEventListener('submit', function(e){
+  e.preventDefault();
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+    var el = document.getElementById('bc_' + k);
+    if(el) el.value = sessionStorage.getItem(k) || '';
+  });
+  if(typeof gtag !== 'undefined'){
+    gtag('event','generate_lead',{currency:'BRL',value:1.0,landing:'branded-content'});
+    // TODO: substituir AW-CONVERSION_ID/LABEL
+    gtag('event','conversion',{'send_to':'AW-CONVERSION_ID/LABEL'});
+  }
+  var form = this;
+  fetch(form.action, {
+    method:'POST', body: new FormData(form), headers:{'Accept':'application/json'}
+  }).then(function(r){
+    if(r.ok){
+      document.getElementById('lp-form-content').style.display='none';
+      document.getElementById('lp-form-success').style.display='block';
+    }
+  }).catch(function(){ alert('Erro ao enviar. Por favor tente pelo WhatsApp.'); });
+});
+</script>
+</body>
+</html>

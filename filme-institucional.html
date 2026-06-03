@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filme Institucional para Empresas | MOV Produtora Fortaleza</title>
+  <meta name="description" content="Direção audiovisual estratégica para empresas em Fortaleza e no Brasil. Filmes institucionais com método, processo claro e equipe especializada. Agende uma conversa." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.movprodutora.com.br/filme-institucional" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.movprodutora.com.br/filme-institucional" />
+  <meta property="og:title" content="Filme Institucional para Empresas | MOV Produtora Fortaleza" />
+  <meta property="og:description" content="Direção audiovisual estratégica para empresas. Filmes institucionais com método, processo claro e equipe especializada." />
+  <meta property="og:image" content="https://movprodutora.com.br/img/logo_branca.png" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RPJ90GVQ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0RPJ90GVQ8');
+  </script>
+  <!-- UTM Capture -->
+  <script>
+  (function(){
+    var p = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+      if(p.has(k)) sessionStorage.setItem(k, p.get(k));
+    });
+  })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/FAVICON-MOV.png" type="image/png" />
+  <style>
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a;
+      --g90:   #111111;
+      --g80:   #1a1a1a;
+      --g60:   #2e2e2e;
+      --g40:   #6b6b6b;
+      --g20:   #b0b0b0;
+      --white: #f5f5f0;
+      --red:   #d42b2b;
+      --gold:  #C9A961;
+      --fd:    'Bebas Neue', sans-serif;
+      --fb:    'DM Sans', sans-serif;
+      --ease:  cubic-bezier(0.16,1,0.3,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: var(--fb); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+    img  { display: block; max-width: 100%; }
+    a    { text-decoration: none; color: inherit; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-thumb { background: var(--red); border-radius: 2px; }
+
+    /* ── UTILITIES ── */
+    .lp-container { width: min(1100px, 92vw); margin: 0 auto; }
+    .lp-label     { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--red); margin-bottom: .9rem; }
+    .lp-btn       { display: inline-flex; align-items: center; gap: .6rem; padding: .9rem 2rem; font-family: var(--fb); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; cursor: pointer; transition: .3s var(--ease); border: 2px solid var(--red); background: var(--red); color: var(--white); }
+    .lp-btn:hover { background: transparent; color: var(--red); }
+    .lp-btn-o     { background: transparent; border-color: rgba(245,245,240,.3); color: var(--white); }
+    .lp-btn-o:hover { border-color: var(--white); }
+    .lp-section   { padding: 6rem 0; }
+    .lp-section-alt { background: var(--g90); }
+
+    /* ── TOPBAR ── */
+    .lp-topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 0; background: rgba(10,10,10,.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--g60); }
+    .lp-topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .lp-topbar-logo svg { height: 32px; }
+    .lp-topbar-cta { display: flex; align-items: center; gap: 1rem; }
+    .lp-wa-btn { display: inline-flex; align-items: center; gap: .5rem; font-size: 13px; font-weight: 600; color: var(--g20); letter-spacing: .05em; transition: color .2s; }
+    .lp-wa-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .lp-wa-btn:hover { color: var(--white); }
+
+    /* ── HERO ── */
+    #lp-hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
+    .lp-hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, var(--black) 0%, #1a0a0a 100%); }
+    .lp-hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 40%, rgba(212,43,43,.12) 0%, transparent 65%); }
+    .lp-hero-grid { position: absolute; inset: 0; opacity: .04; background-image: linear-gradient(var(--g60) 1px, transparent 1px), linear-gradient(90deg, var(--g60) 1px, transparent 1px); background-size: 80px 80px; }
+    .lp-hero-content { position: relative; z-index: 2; padding: 120px 0 80px; max-width: 760px; }
+    .lp-hero-eyebrow { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+    .lp-hero-eyebrow::before { content: ''; display: block; width: 40px; height: 2px; background: var(--red); }
+    .lp-hero-eyebrow span { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--red); }
+    .lp-hero-h1 { font-family: var(--fd); font-size: clamp(2.6rem, 5.5vw, 5.2rem); line-height: .95; margin-bottom: 1.8rem; }
+    .lp-hero-h1 em { font-style: normal; color: var(--gold); }
+    .lp-hero-sub { font-size: 1.05rem; font-weight: 300; color: var(--g20); max-width: 560px; line-height: 1.75; margin-bottom: 2.5rem; }
+    .lp-hero-acts { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .lp-hero-stats { display: flex; gap: 2.5rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--g60); flex-wrap: wrap; }
+    .lp-stat-n { font-family: var(--fd); font-size: 2.4rem; line-height: 1; color: var(--white); }
+    .lp-stat-n span { color: var(--red); }
+    .lp-stat-l { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--g40); margin-top: .3rem; }
+
+    /* ── PROVA SOCIAL ── */
+    #lp-prova { padding: 3.5rem 0; border-top: 1px solid var(--g60); border-bottom: 1px solid var(--g60); background: var(--g90); }
+    .lp-prova-label { text-align: center; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--g40); margin-bottom: 2rem; }
+    .lp-logos { display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+    .lp-logo-item { font-family: var(--fd); font-size: 1.3rem; letter-spacing: .12em; color: var(--g40); text-transform: uppercase; transition: color .2s; }
+    .lp-logo-item:hover { color: var(--white); }
+    .lp-logo-img { height: 40px; width: auto; opacity: .45; filter: brightness(0) invert(1); transition: opacity .2s; }
+    .lp-logo-img:hover { opacity: .85; }
+
+    /* ── POR QUE A MOV ── */
+    #lp-porq { padding: 6rem 0; }
+    .lp-porq-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--g60); border: 1px solid var(--g60); margin-top: 3.5rem; }
+    .lp-porq-card { background: var(--black); padding: 2.5rem 2rem; position: relative; overflow: hidden; transition: background .3s; }
+    .lp-porq-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .35s var(--ease); }
+    .lp-porq-card:hover { background: var(--g90); }
+    .lp-porq-card:hover::after { transform: scaleX(1); }
+    .lp-porq-n { font-family: var(--fd); font-size: 3rem; color: var(--g60); line-height: 1; margin-bottom: 1.2rem; transition: color .3s; }
+    .lp-porq-card:hover .lp-porq-n { color: var(--gold); }
+    .lp-porq-t { font-family: var(--fd); font-size: 1.4rem; letter-spacing: .06em; margin-bottom: .8rem; }
+    .lp-porq-d { font-size: .88rem; font-weight: 300; color: var(--g20); line-height: 1.7; }
+
+    /* ── PROCESSO ── */
+    #lp-processo { padding: 6rem 0; background: var(--g90); }
+    .lp-processo-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 3.5rem; }
+    .lp-step { padding: 2rem 1.5rem; border-left: 1px solid var(--g60); position: relative; }
+    .lp-step:first-child { border-left: none; }
+    .lp-step-n { font-family: var(--fd); font-size: 4rem; line-height: 1; color: var(--g60); margin-bottom: 1rem; }
+    .lp-step-t { font-family: var(--fd); font-size: 1.15rem; letter-spacing: .08em; color: var(--white); margin-bottom: .6rem; }
+    .lp-step-d { font-size: .82rem; font-weight: 300; color: var(--g20); line-height: 1.65; }
+    .lp-step-bar { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+    .lp-step:hover .lp-step-bar { transform: scaleX(1); }
+
+    /* ── CASES ── */
+    #lp-cases { padding: 6rem 0; }
+    .lp-cases-grid { display: grid; grid-template-columns: 1fr; gap: 2px; margin-top: 3.5rem; }
+    .lp-case { display: grid; grid-template-columns: 1fr 2fr; background: var(--g90); border: 1px solid var(--g60); overflow: hidden; transition: border-color .3s; }
+    .lp-case:hover { border-color: var(--g40); }
+    .lp-case-thumb { background: var(--g80); min-height: 220px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .lp-case-thumb-placeholder { font-family: var(--fd); font-size: 1rem; letter-spacing: .15em; color: var(--g60); text-align: center; padding: 1rem; }
+    .lp-case-body { padding: 2.5rem 2rem; display: flex; flex-direction: column; justify-content: center; }
+    .lp-case-tag { font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--red); margin-bottom: .8rem; }
+    .lp-case-t { font-family: var(--fd); font-size: 1.6rem; letter-spacing: .04em; margin-bottom: 1rem; line-height: 1.1; }
+    .lp-case-desafio { font-size: .88rem; font-weight: 300; color: var(--g20); line-height: 1.7; margin-bottom: .5rem; }
+    .lp-case-resultado { font-size: .88rem; font-weight: 500; color: var(--white); line-height: 1.7; }
+
+    /* ── FORMULÁRIO ── */
+    #lp-form { padding: 6rem 0; background: var(--g90); }
+    .lp-form-wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
+    .lp-form-intro h2 { font-family: var(--fd); font-size: clamp(2rem, 4vw, 3.5rem); line-height: .95; margin-bottom: 1.2rem; }
+    .lp-form-intro h2 em { font-style: normal; color: var(--gold); }
+    .lp-form-intro p { font-size: .92rem; font-weight: 300; color: var(--g20); line-height: 1.75; margin-bottom: 2rem; }
+    .lp-form-trust { display: flex; flex-direction: column; gap: .7rem; }
+    .lp-form-trust-item { display: flex; align-items: center; gap: .7rem; font-size: .82rem; color: var(--g40); }
+    .lp-form-trust-item::before { content: ''; display: block; width: 6px; height: 6px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
+    .lp-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .lp-form-full { grid-column: 1 / -1; }
+    .lp-field { display: flex; flex-direction: column; gap: .4rem; }
+    .lp-field label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--g40); }
+    .lp-field input,
+    .lp-field select,
+    .lp-field textarea { background: var(--g80); border: 1px solid var(--g60); color: var(--white); font-family: var(--fb); font-size: .9rem; font-weight: 300; padding: .85rem 1rem; border-radius: 2px; outline: none; transition: border-color .2s; width: 100%; appearance: none; }
+    .lp-field input:focus,
+    .lp-field select:focus,
+    .lp-field textarea:focus { border-color: var(--gold); }
+    .lp-field select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6b6b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+    .lp-field select option { background: var(--g80); }
+    .lp-field textarea { resize: vertical; min-height: 100px; }
+    .lp-form-submit { grid-column: 1 / -1; display: flex; flex-direction: column; gap: .8rem; align-items: flex-start; margin-top: .5rem; }
+    .lp-privacy { font-size: 11px; color: var(--g40); line-height: 1.5; }
+    /* Mensagem de sucesso */
+    #lp-form-success { display: none; text-align: center; padding: 4rem 2rem; }
+    #lp-form-success h3 { font-family: var(--fd); font-size: 2.5rem; margin-bottom: 1rem; }
+    #lp-form-success p { color: var(--g20); font-weight: 300; margin-bottom: 2rem; }
+
+    /* ── RODAPÉ MINIMAL ── */
+    .lp-footer { padding: 2.5rem 0; border-top: 1px solid var(--g60); }
+    .lp-footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .lp-footer-links { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+    .lp-footer-link { font-size: 12px; color: var(--g40); letter-spacing: .08em; transition: color .2s; }
+    .lp-footer-link:hover { color: var(--white); }
+    .lp-footer-back { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--g20); border: 1px solid var(--g60); padding: .4rem 1rem; border-radius: 2px; transition: color .2s, border-color .2s; }
+    .lp-footer-back:hover { color: var(--white); border-color: var(--g40); }
+
+    /* ── FADE IN ── */
+    .lp-reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(0.16,1,0.3,1), transform .7s cubic-bezier(0.16,1,0.3,1); }
+    .lp-reveal.lp-vis { opacity: 1; transform: none; }
+    .lp-d1 { transition-delay: .1s; } .lp-d2 { transition-delay: .2s; } .lp-d3 { transition-delay: .3s; } .lp-d4 { transition-delay: .4s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .lp-porq-grid { grid-template-columns: 1fr 1fr; }
+      .lp-processo-steps { grid-template-columns: 1fr 1fr; }
+      .lp-step { border-left: none; border-top: 1px solid var(--g60); }
+      .lp-step:first-child { border-top: none; }
+      .lp-form-wrap { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    @media (max-width: 768px) {
+      .lp-section, #lp-hero, #lp-prova, #lp-porq, #lp-processo, #lp-cases, #lp-form { padding: 4rem 0; }
+      .lp-hero-content { padding-top: 90px; }
+      .lp-porq-grid { grid-template-columns: 1fr; }
+      .lp-processo-steps { grid-template-columns: 1fr; }
+      .lp-case { grid-template-columns: 1fr; }
+      .lp-case-thumb { min-height: 160px; }
+      .lp-form { grid-template-columns: 1fr; }
+      .lp-form-full { grid-column: 1; }
+      .lp-logos { gap: 1.5rem; }
+      .lp-footer-inner { flex-direction: column; align-items: flex-start; }
+      .lp-topbar-cta .lp-btn { display: none; }
+      .lp-hero-stats { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="lp-topbar" id="lpHdr">
+  <div class="lp-container">
+    <div class="lp-topbar-inner">
+      <a href="/" class="lp-topbar-logo" aria-label="MOV Produtora — Home">
+        <svg height="32" viewBox="0 0 230 72" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <text x="0" y="58" font-family="'Bebas Neue',sans-serif" font-size="64" fill="#f5f5f0" letter-spacing="1">MOV</text>
+          <circle cx="204" cy="55" r="7" fill="#d42b2b"/>
+          <text x="2" y="70" font-family="'DM Sans',sans-serif" font-size="9.5" fill="#6b6b6b" letter-spacing="9" font-weight="700">PRODUTORA</text>
+        </svg>
+      </a>
+      <div class="lp-topbar-cta">
+        <!-- TODO: substituir 5585991986159 se necessário -->
+        <a href="https://wa.me/5585991986159?text=Ol%C3%A1%2C%20vim%20da%20p%C3%A1gina%20de%20Filme%20Institucional%20da%20MOV%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
+           target="_blank" class="lp-wa-btn"
+           onclick="gtag('event','whatsapp_click',{landing:'filme-institucional'})">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+        <a href="#lp-form" class="lp-btn">Agendar conversa</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="lp-hero">
+  <div class="lp-hero-bg"></div>
+  <div class="lp-hero-grid"></div>
+  <div class="lp-container">
+    <div class="lp-hero-content">
+      <div class="lp-hero-eyebrow">
+        <span>Fortaleza · Ceará · Brasil</span>
+      </div>
+      <h1 class="lp-hero-h1">
+        Filmes institucionais para empresas que<br>
+        <em>comunicam por valor.</em>
+      </h1>
+      <p class="lp-hero-sub">
+        Direção audiovisual estratégica para indústria, saúde, educação e tecnologia.
+        Processo claro, equipe especializada, entrega mensurável.
+      </p>
+      <div class="lp-hero-acts">
+        <a href="#lp-form" class="lp-btn">Agendar conversa estratégica</a>
+        <a href="#lp-cases" class="lp-btn lp-btn-o">Ver cases</a>
+      </div>
+      <div class="lp-hero-stats">
+        <div>
+          <div class="lp-stat-n">7<span>+</span></div>
+          <div class="lp-stat-l">Anos de direção</div>
+        </div>
+        <div>
+          <div class="lp-stat-n">TV</div>
+          <div class="lp-stat-l">Conteúdo veiculado</div>
+        </div>
+        <div>
+          <div class="lp-stat-n">NAC</div>
+          <div class="lp-stat-l">Marcas nacionais</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section id="lp-prova">
+  <div class="lp-container">
+    <p class="lp-prova-label">Direção audiovisual para</p>
+    <div class="lp-logos">
+      <img src="img/logos/GERDAU.png"                  alt="Gerdau"                class="lp-logo-img" loading="lazy" />
+      <img src="img/logos/uniateneu.png"               alt="UniAteneu"             class="lp-logo-img" loading="lazy" />
+      <img src="img/logos/hospital_sao_raimundo.png"   alt="Hospital São Raimundo" class="lp-logo-img" loading="lazy" />
+      <img src="img/logos/ironberg.webp"               alt="Ironberg"              class="lp-logo-img" loading="lazy" />
+      <img src="img/logos/victa_engenharia.png"        alt="Victa Engenharia"      class="lp-logo-img" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE A MOV -->
+<section id="lp-porq" class="lp-section">
+  <div class="lp-container">
+    <div class="lp-reveal">
+      <span class="lp-label">Por que a MOV</span>
+      <h2 style="font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);margin-top:.3rem;line-height:.95">O que separa um vídeo bonito<br>de um filme que <em style="font-style:normal;color:var(--gold)">posiciona uma marca.</em></h2>
+    </div>
+    <div class="lp-porq-grid lp-reveal" style="margin-top:3.5rem">
+      <div class="lp-porq-card">
+        <div class="lp-porq-bar" style="position:absolute;top:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(0.16,1,0.3,1)"></div>
+        <div class="lp-porq-n">01</div>
+        <div class="lp-porq-t">DIREÇÃO ESTRATÉGICA</div>
+        <p class="lp-porq-d">Cada filme começa por uma pergunta de posicionamento, não por um briefing técnico. A câmera só liga quando a estratégia está clara.</p>
+      </div>
+      <div class="lp-porq-card">
+        <div class="lp-porq-n">02</div>
+        <div class="lp-porq-t">PROCESSO DOCUMENTADO</div>
+        <p class="lp-porq-d">Da descoberta à entrega, 5 etapas claras com prazos definidos. O cliente sabe exatamente em que ponto o projeto está em cada momento.</p>
+      </div>
+      <div class="lp-porq-card">
+        <div class="lp-porq-n">03</div>
+        <div class="lp-porq-t">EQUIPE ESPECIALIZADA</div>
+        <p class="lp-porq-d">Diretor, roteirista, DOP e editor com mais de 7 anos em conteúdo corporativo. Nenhum generalista. Cada profissional selecionado para o projeto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO TRABALHAMOS -->
+<section id="lp-processo" class="lp-section lp-section-alt">
+  <div class="lp-container">
+    <div class="lp-reveal">
+      <span class="lp-label">Como trabalhamos</span>
+      <h2 style="font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);margin-top:.3rem;line-height:.95">Cinco etapas.<br><em style="font-style:normal;color:var(--gold)">Zero improviso.</em></h2>
+    </div>
+    <div class="lp-processo-steps lp-reveal">
+      <div class="lp-step">
+        <div class="lp-step-bar"></div>
+        <div class="lp-step-n">01</div>
+        <div class="lp-step-t">DESCOBERTA</div>
+        <p class="lp-step-d">Imersão no negócio do cliente. Entendemos o problema de comunicação antes de pensar em câmera, luz ou roteiro.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step-bar"></div>
+        <div class="lp-step-n">02</div>
+        <div class="lp-step-t">CONCEITO</div>
+        <p class="lp-step-d">Definição da decisão criativa central. Por que esse filme existe, para quem, e o que precisa fazer o público sentir.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step-bar"></div>
+        <div class="lp-step-n">03</div>
+        <div class="lp-step-t">ROTEIRO</div>
+        <p class="lp-step-d">Estrutura narrativa, story arc e validação com o cliente antes de qualquer gravação. Nada sai do papel sem aprovação.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step-bar"></div>
+        <div class="lp-step-n">04</div>
+        <div class="lp-step-t">PRODUÇÃO</div>
+        <p class="lp-step-d">Direção, captação, equipe técnica e logística com padrão profissional. Equipamento de cinema. Equipe de set completa.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step-bar"></div>
+        <div class="lp-step-n">05</div>
+        <div class="lp-step-t">ENTREGA</div>
+        <p class="lp-step-d">Finalização, color grading, mix de som e entrega em todos os formatos — TV, web, redes sociais, mídia paga.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section id="lp-cases" class="lp-section">
+  <div class="lp-container">
+    <div class="lp-reveal">
+      <span class="lp-label">Cases</span>
+      <h2 style="font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);margin-top:.3rem;line-height:.95">Projetos que<br><em style="font-style:normal;color:var(--gold)">posicionaram marcas.</em></h2>
+    </div>
+    <div class="lp-cases-grid lp-reveal">
+
+      <!-- TODO: substituir pelo case real do cliente industrial (ex: Gerdau) -->
+      <div class="lp-case">
+        <div class="lp-case-thumb">
+          <div class="lp-case-thumb-placeholder">FRAME DO<br>FILME AQUI</div>
+        </div>
+        <div class="lp-case-body">
+          <div class="lp-case-tag">Indústria · Filme Institucional</div>
+          <div class="lp-case-t">Cliente Industrial — Gerdau Cearense</div>
+          <p class="lp-case-desafio"><strong style="color:var(--g20);font-weight:500">Desafio:</strong> Comunicar a atuação regional de uma marca nacional para públicos interno e externo com autenticidade e padrão corporativo.</p>
+          <p class="lp-case-resultado"><strong style="color:var(--white);font-weight:500">Resultado:</strong> Filme institucional exibido em evento nacional da marca, com distribuição em canais corporativos e redes sociais. <!-- TODO: substituir por métrica real --></p>
+        </div>
+      </div>
+
+      <!-- TODO: substituir pelo case real do cliente educacional (ex: UniAteneu) -->
+      <div class="lp-case">
+        <div class="lp-case-thumb">
+          <div class="lp-case-thumb-placeholder">FRAME DO<br>FILME AQUI</div>
+        </div>
+        <div class="lp-case-body">
+          <div class="lp-case-tag">Educação · Branded Content</div>
+          <div class="lp-case-t">Cliente Educacional — UniAteneu</div>
+          <p class="lp-case-desafio"><strong style="color:var(--g20);font-weight:500">Desafio:</strong> Posicionar a instituição como referência em inovação educacional para atrair novos alunos e reter os atuais. <!-- TODO: desafio real --></p>
+          <p class="lp-case-resultado"><strong style="color:var(--white);font-weight:500">Resultado:</strong> Série de filmes institucionais para 20 anos da UniAteneu, exibidos em cerimônias e distribuídos em redes sociais. <!-- TODO: métricas reais --></p>
+        </div>
+      </div>
+
+      <!-- TODO: substituir pelo case real do cliente saúde (ex: Hospital São Raimundo) -->
+      <div class="lp-case">
+        <div class="lp-case-thumb">
+          <div class="lp-case-thumb-placeholder">FRAME DO<br>FILME AQUI</div>
+        </div>
+        <div class="lp-case-body">
+          <div class="lp-case-tag">Saúde · Filme Institucional</div>
+          <div class="lp-case-t">Cliente Saúde — Hospital São Raimundo</div>
+          <p class="lp-case-desafio"><strong style="color:var(--g20);font-weight:500">Desafio:</strong> Humanizar a comunicação institucional de um hospital de grande porte sem perder o rigor e a credibilidade da marca. <!-- TODO: desafio real --></p>
+          <p class="lp-case-resultado"><strong style="color:var(--white);font-weight:500">Resultado:</strong> Filme institucional com narrativa emocional e técnica, utilizado em comunicação interna, externa e mídia paga. <!-- TODO: métricas reais --></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁRIO -->
+<section id="lp-form" class="lp-section lp-section-alt">
+  <div class="lp-container">
+
+    <div id="lp-form-content">
+      <div class="lp-form-wrap">
+        <!-- Intro -->
+        <div class="lp-form-intro lp-reveal">
+          <span class="lp-label">Próximo passo</span>
+          <h2>Vamos conversar sobre seu <em>próximo filme.</em></h2>
+          <p>Preencha os dados abaixo. Nossa equipe entra em contato em até 24h para agendar uma conversa estratégica sem compromisso.</p>
+          <div class="lp-form-trust">
+            <div class="lp-form-trust-item">Atendemos indústria, saúde, educação e tecnologia</div>
+            <div class="lp-form-trust-item">Processo em 5 etapas com prazos definidos</div>
+            <div class="lp-form-trust-item">Clientes em Fortaleza e em todo o Brasil</div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="lp-reveal lp-d1">
+          <!-- TODO: substituir FORMSPREE_ID pelo endpoint real em https://formspree.io -->
+          <form class="lp-form" id="lpFormFI"
+                action="https://formspree.io/f/FORMSPREE_ID"
+                method="POST">
+
+            <!-- Hidden UTM fields -->
+            <input type="hidden" name="utm_source"   id="fi_utm_source">
+            <input type="hidden" name="utm_medium"   id="fi_utm_medium">
+            <input type="hidden" name="utm_campaign" id="fi_utm_campaign">
+            <input type="hidden" name="utm_content"  id="fi_utm_content">
+            <input type="hidden" name="utm_term"     id="fi_utm_term">
+            <input type="hidden" name="landing_page" value="filme-institucional">
+
+            <div class="lp-field">
+              <label for="fi_nome">Nome completo *</label>
+              <input type="text" id="fi_nome" name="nome" required placeholder="Seu nome" />
+            </div>
+            <div class="lp-field">
+              <label for="fi_empresa">Empresa *</label>
+              <input type="text" id="fi_empresa" name="empresa" required placeholder="Nome da empresa" />
+            </div>
+            <div class="lp-field">
+              <label for="fi_cargo">Cargo *</label>
+              <input type="text" id="fi_cargo" name="cargo" required placeholder="Ex: Gerente de Marketing" />
+            </div>
+            <div class="lp-field">
+              <label for="fi_email">E-mail corporativo *</label>
+              <input type="email" id="fi_email" name="email" required placeholder="voce@empresa.com.br" />
+            </div>
+            <div class="lp-field lp-form-full">
+              <label for="fi_whatsapp">WhatsApp *</label>
+              <input type="tel" id="fi_whatsapp" name="whatsapp" required placeholder="(85) 99999-9999" />
+            </div>
+            <div class="lp-field">
+              <label for="fi_tipo">Tipo de projeto *</label>
+              <select id="fi_tipo" name="tipo_projeto" required>
+                <option value="" disabled selected>Selecione</option>
+                <option>Filme institucional</option>
+                <option>Branded content</option>
+                <option>Cobertura de evento</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="lp-field">
+              <label for="fi_investimento">Faixa de investimento</label>
+              <select id="fi_investimento" name="investimento">
+                <option value="" disabled selected>Selecione</option>
+                <option>Até R$10k</option>
+                <option>R$10k – R$25k</option>
+                <option>R$25k – R$50k</option>
+                <option>R$50k+</option>
+                <option>A definir</option>
+              </select>
+            </div>
+            <div class="lp-field lp-form-full">
+              <label for="fi_mensagem">Mensagem (opcional)</label>
+              <textarea id="fi_mensagem" name="mensagem" placeholder="Conte brevemente sobre o projeto..."></textarea>
+            </div>
+            <div class="lp-form-submit">
+              <button type="submit" class="lp-btn">Agendar conversa estratégica</button>
+              <p class="lp-privacy">Seus dados são confidenciais e usados apenas para contato comercial.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sucesso -->
+    <div id="lp-form-success">
+      <div style="width:48px;height:48px;border-radius:50%;background:rgba(201,169,97,.15);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A961" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3>Mensagem recebida.</h3>
+      <p>Nossa equipe retorna em até 24h para agendar uma conversa estratégica.</p>
+      <a href="/" class="lp-btn lp-btn-o">Voltar para o site</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- RODAPÉ MINIMAL -->
+<footer class="lp-footer">
+  <div class="lp-container">
+    <div class="lp-footer-inner">
+      <svg height="28" viewBox="0 0 230 72" xmlns="http://www.w3.org/2000/svg" aria-label="MOV Produtora">
+        <text x="0" y="58" font-family="'Bebas Neue',sans-serif" font-size="64" fill="#f5f5f0" letter-spacing="1">MOV</text>
+        <circle cx="204" cy="55" r="7" fill="#d42b2b"/>
+        <text x="2" y="70" font-family="'DM Sans',sans-serif" font-size="9.5" fill="#6b6b6b" letter-spacing="9" font-weight="700">PRODUTORA</text>
+      </svg>
+      <div class="lp-footer-links">
+        <a href="mailto:contato@movprodutora.com.br" class="lp-footer-link">contato@movprodutora.com.br</a>
+        <a href="https://wa.me/5585991986159" target="_blank" class="lp-footer-link">(85) 99198.6159</a>
+      </div>
+      <a href="/" class="lp-footer-back">← Voltar para movprodutora.com.br</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+(function(){
+  var els = document.querySelectorAll('.lp-reveal');
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('lp-vis'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  els.forEach(function(el){ obs.observe(el); });
+})();
+
+// Topbar scroll
+window.addEventListener('scroll', function(){
+  document.getElementById('lpHdr').style.background =
+    window.scrollY > 40 ? 'rgba(10,10,10,.98)' : 'rgba(10,10,10,.95)';
+});
+
+// Form submit
+document.getElementById('lpFormFI').addEventListener('submit', function(e){
+  e.preventDefault();
+  // Preenche UTMs
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+    var el = document.getElementById('fi_' + k);
+    if(el) el.value = sessionStorage.getItem(k) || '';
+  });
+  // Eventos de conversão
+  if(typeof gtag !== 'undefined'){
+    gtag('event','generate_lead',{currency:'BRL',value:1.0,landing:'filme-institucional'});
+    // TODO: substituir AW-CONVERSION_ID/LABEL pelo ID real do Google Ads
+    gtag('event','conversion',{'send_to':'AW-CONVERSION_ID/LABEL'});
+  }
+  // Envio Formspree
+  var form = this;
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(function(r){
+    if(r.ok){
+      document.getElementById('lp-form-content').style.display = 'none';
+      var s = document.getElementById('lp-form-success');
+      s.style.display = 'block';
+    }
+  }).catch(function(){
+    alert('Erro ao enviar. Por favor tente pelo WhatsApp.');
+  });
+});
+</script>
+
+</body>
+</html>

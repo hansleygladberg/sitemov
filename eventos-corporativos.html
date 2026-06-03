@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cobertura Audiovisual em Tempo Real para Eventos Corporativos | MOV</title>
+  <meta name="description" content="Cobertura audiovisual profissional para eventos corporativos em Fortaleza. Entrega do filme ainda durante o evento. Equipe local para empresas de todo o Brasil." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.movprodutora.com.br/eventos-corporativos" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.movprodutora.com.br/eventos-corporativos" />
+  <meta property="og:title" content="Cobertura Audiovisual em Tempo Real para Eventos Corporativos | MOV" />
+  <meta property="og:description" content="Cobertura audiovisual profissional para eventos corporativos. Entrega do filme ainda durante o evento." />
+  <meta property="og:image" content="https://movprodutora.com.br/img/logo_branca.png" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RPJ90GVQ8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0RPJ90GVQ8');
+  </script>
+  <!-- UTM Capture -->
+  <script>
+  (function(){
+    var p = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+      if(p.has(k)) sessionStorage.setItem(k, p.get(k));
+    });
+  })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/FAVICON-MOV.png" type="image/png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #0a0a0a; --g90: #111111; --g80: #1a1a1a; --g60: #2e2e2e;
+      --g40: #6b6b6b; --g20: #b0b0b0; --white: #f5f5f0; --red: #d42b2b;
+      --gold: #C9A961; --fd: 'Bebas Neue', sans-serif; --fb: 'DM Sans', sans-serif;
+      --ease: cubic-bezier(0.16,1,0.3,1);
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--black); color: var(--white); font-family: var(--fb); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+    img  { display: block; max-width: 100%; }
+    a    { text-decoration: none; color: inherit; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-thumb { background: var(--red); border-radius: 2px; }
+
+    .lp-container { width: min(1100px, 92vw); margin: 0 auto; }
+    .lp-label     { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--red); margin-bottom: .9rem; }
+    .lp-btn       { display: inline-flex; align-items: center; gap: .6rem; padding: .9rem 2rem; font-family: var(--fb); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; cursor: pointer; transition: .3s var(--ease); border: 2px solid var(--red); background: var(--red); color: var(--white); }
+    .lp-btn:hover { background: transparent; color: var(--red); }
+    .lp-btn-o     { background: transparent; border-color: rgba(245,245,240,.3); color: var(--white); }
+    .lp-btn-o:hover { border-color: var(--white); }
+    .lp-section   { padding: 6rem 0; }
+    .lp-section-alt { background: var(--g90); }
+    .lp-reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+    .lp-reveal.lp-vis { opacity: 1; transform: none; }
+    .lp-d1 { transition-delay: .1s; } .lp-d2 { transition-delay: .2s; } .lp-d3 { transition-delay: .3s; }
+
+    /* TOPBAR */
+    .lp-topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 0; background: rgba(10,10,10,.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--g60); }
+    .lp-topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .lp-wa-btn { display: inline-flex; align-items: center; gap: .5rem; font-size: 13px; font-weight: 600; color: var(--g20); letter-spacing: .05em; transition: color .2s; }
+    .lp-wa-btn svg { width: 18px; height: 18px; }
+    .lp-wa-btn:hover { color: var(--white); }
+    .lp-topbar-cta { display: flex; align-items: center; gap: 1rem; }
+
+    /* HERO */
+    #lp-hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
+    .lp-hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, var(--black) 0%, #0d0a0a 100%); }
+    .lp-hero-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 60%, rgba(212,43,43,.1) 0%, transparent 60%); }
+    .lp-hero-grid { position: absolute; inset: 0; opacity: .03; background-image: linear-gradient(var(--g60) 1px, transparent 1px), linear-gradient(90deg, var(--g60) 1px, transparent 1px); background-size: 80px 80px; }
+    /* LIVE badge */
+    .lp-live-badge { display: inline-flex; align-items: center; gap: .5rem; background: var(--red); color: var(--white); font-family: var(--fd); font-size: 1rem; letter-spacing: .2em; padding: .35rem .9rem; border-radius: 2px; margin-bottom: 1.8rem; }
+    .lp-live-dot { width: 8px; height: 8px; background: var(--white); border-radius: 50%; animation: livePulse 1.2s ease-in-out infinite; }
+    @keyframes livePulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+    .lp-hero-content { position: relative; z-index: 2; padding: 120px 0 80px; max-width: 780px; }
+    .lp-hero-h1 { font-family: var(--fd); font-size: clamp(2.4rem, 5vw, 5rem); line-height: .95; margin-bottom: 1.8rem; }
+    .lp-hero-h1 em { font-style: normal; color: var(--red); }
+    .lp-hero-sub { font-size: 1.05rem; font-weight: 300; color: var(--g20); max-width: 560px; line-height: 1.75; margin-bottom: 2.5rem; }
+    .lp-hero-acts { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+
+    /* ENTREGAS */
+    #lp-entregas { padding: 6rem 0; }
+    .lp-entregas-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--g60); border: 1px solid var(--g60); margin-top: 3.5rem; }
+    .lp-entrega-card { background: var(--black); padding: 2.5rem 2rem; position: relative; overflow: hidden; transition: background .3s; }
+    .lp-entrega-card:hover { background: var(--g90); }
+    .lp-entrega-ic { font-size: 2rem; margin-bottom: 1.2rem; }
+    .lp-entrega-n { font-family: var(--fd); font-size: 3rem; color: var(--g60); line-height: 1; margin-bottom: 1.2rem; transition: color .3s; }
+    .lp-entrega-card:hover .lp-entrega-n { color: var(--red); }
+    .lp-entrega-t { font-family: var(--fd); font-size: 1.35rem; letter-spacing: .05em; margin-bottom: .8rem; line-height: 1.1; }
+    .lp-entrega-d { font-size: .88rem; font-weight: 300; color: var(--g20); line-height: 1.7; }
+    .lp-entrega-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform .35s var(--ease); }
+    .lp-entrega-card:hover .lp-entrega-bar { transform: scaleX(1); }
+
+    /* PROVA SOCIAL */
+    #lp-prova { padding: 3.5rem 0; background: var(--g90); border-top: 1px solid var(--g60); border-bottom: 1px solid var(--g60); }
+    .lp-prova-quote { text-align: center; font-family: var(--fd); font-size: clamp(1.4rem, 3vw, 2.4rem); letter-spacing: .04em; line-height: 1.2; }
+    .lp-prova-quote em { font-style: normal; color: var(--red); }
+
+    /* POR QUE TEMPO REAL */
+    #lp-porq { padding: 6rem 0; }
+    .lp-porq-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 6rem; align-items: start; }
+    .lp-porq-sticky { position: sticky; top: 120px; }
+    .lp-porq-title { font-family: var(--fd); font-size: clamp(2rem, 4vw, 3.2rem); line-height: .95; }
+    .lp-porq-title em { font-style: normal; color: var(--red); }
+    .lp-porq-paras { display: flex; flex-direction: column; gap: 1.8rem; }
+    .lp-porq-p { font-size: 1rem; font-weight: 300; color: var(--g20); line-height: 1.8; }
+    .lp-porq-p strong { color: var(--white); font-weight: 500; }
+
+    /* EQUIPE LOCAL */
+    #lp-local { padding: 6rem 0; background: var(--g90); }
+    .lp-local-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: center; }
+    .lp-local-h2 { font-family: var(--fd); font-size: clamp(2rem, 4vw, 3.2rem); line-height: .95; margin-bottom: 1.5rem; }
+    .lp-local-h2 em { font-style: normal; color: var(--red); }
+    .lp-local-p { font-size: .95rem; font-weight: 300; color: var(--g20); line-height: 1.8; margin-bottom: 2rem; }
+    .lp-cities { display: flex; flex-wrap: wrap; gap: .6rem; }
+    .lp-city { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--g40); border: 1px solid var(--g60); padding: .3rem .7rem; border-radius: 2px; }
+
+    /* CASES */
+    #lp-cases { padding: 6rem 0; }
+    .lp-cases-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 3.5rem; }
+    .lp-case { background: var(--g90); border: 1px solid var(--g60); overflow: hidden; display: flex; flex-direction: column; transition: border-color .3s; }
+    .lp-case:hover { border-color: var(--g40); }
+    .lp-case-thumb { background: var(--g80); height: 200px; display: flex; align-items: center; justify-content: center; }
+    .lp-case-thumb-p { font-family: var(--fd); font-size: .9rem; letter-spacing: .15em; color: var(--g60); text-align: center; }
+    .lp-case-body { padding: 2rem 1.75rem; }
+    .lp-case-tag { font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--red); margin-bottom: .7rem; }
+    .lp-case-t { font-family: var(--fd); font-size: 1.5rem; letter-spacing: .04em; margin-bottom: .9rem; line-height: 1.1; }
+    .lp-case-d { font-size: .87rem; font-weight: 300; color: var(--g20); line-height: 1.7; }
+
+    /* FORMULÁRIO */
+    #lp-form { padding: 6rem 0; background: var(--g90); }
+    .lp-form-wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; align-items: start; }
+    .lp-form-intro h2 { font-family: var(--fd); font-size: clamp(2rem, 4vw, 3.2rem); line-height: .95; margin-bottom: 1.2rem; }
+    .lp-form-intro h2 em { font-style: normal; color: var(--red); }
+    .lp-form-intro p { font-size: .92rem; font-weight: 300; color: var(--g20); line-height: 1.75; margin-bottom: 2rem; }
+    .lp-form-trust { display: flex; flex-direction: column; gap: .7rem; }
+    .lp-form-trust-item { display: flex; align-items: center; gap: .7rem; font-size: .82rem; color: var(--g40); }
+    .lp-form-trust-item::before { content: ''; display: block; width: 6px; height: 6px; background: var(--red); border-radius: 50%; flex-shrink: 0; }
+    .lp-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .lp-form-full { grid-column: 1 / -1; }
+    .lp-field { display: flex; flex-direction: column; gap: .4rem; }
+    .lp-field label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--g40); }
+    .lp-field input, .lp-field select, .lp-field textarea { background: var(--g80); border: 1px solid var(--g60); color: var(--white); font-family: var(--fb); font-size: .9rem; font-weight: 300; padding: .85rem 1rem; border-radius: 2px; outline: none; transition: border-color .2s; width: 100%; appearance: none; }
+    .lp-field input:focus, .lp-field select:focus, .lp-field textarea:focus { border-color: var(--gold); }
+    .lp-field select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6b6b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+    .lp-field select option { background: var(--g80); }
+    .lp-field textarea { resize: vertical; min-height: 90px; }
+    /* checkboxes */
+    .lp-checkgroup { display: flex; flex-direction: column; gap: .5rem; }
+    .lp-check-label { display: flex; align-items: center; gap: .6rem; font-size: .9rem; font-weight: 300; color: var(--g20); cursor: pointer; }
+    .lp-check-label input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--red); cursor: pointer; }
+    .lp-form-submit { grid-column: 1 / -1; display: flex; flex-direction: column; gap: .8rem; align-items: flex-start; margin-top: .5rem; }
+    .lp-privacy { font-size: 11px; color: var(--g40); line-height: 1.5; }
+    #lp-form-success { display: none; text-align: center; padding: 4rem 2rem; }
+    #lp-form-success h3 { font-family: var(--fd); font-size: 2.5rem; margin-bottom: 1rem; }
+    #lp-form-success p { color: var(--g20); font-weight: 300; margin-bottom: 2rem; }
+
+    /* FOOTER */
+    .lp-footer { padding: 2.5rem 0; border-top: 1px solid var(--g60); }
+    .lp-footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .lp-footer-links { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+    .lp-footer-link { font-size: 12px; color: var(--g40); letter-spacing: .08em; transition: color .2s; }
+    .lp-footer-link:hover { color: var(--white); }
+    .lp-footer-back { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--g20); border: 1px solid var(--g60); padding: .4rem 1rem; border-radius: 2px; transition: color .2s, border-color .2s; }
+    .lp-footer-back:hover { color: var(--white); border-color: var(--g40); }
+
+    @media (max-width: 1024px) {
+      .lp-entregas-grid { grid-template-columns: 1fr 1fr; }
+      .lp-porq-wrap { grid-template-columns: 1fr; gap: 3rem; }
+      .lp-porq-sticky { position: static; }
+      .lp-local-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .lp-form-wrap { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    @media (max-width: 768px) {
+      .lp-section, #lp-hero, #lp-entregas, #lp-porq, #lp-local, #lp-cases, #lp-form { padding: 4rem 0; }
+      .lp-hero-content { padding-top: 90px; }
+      .lp-entregas-grid { grid-template-columns: 1fr; }
+      .lp-cases-grid { grid-template-columns: 1fr; }
+      .lp-form { grid-template-columns: 1fr; }
+      .lp-form-full { grid-column: 1; }
+      .lp-topbar-cta .lp-btn { display: none; }
+      .lp-footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<header class="lp-topbar" id="lpHdr">
+  <div class="lp-container">
+    <div class="lp-topbar-inner">
+      <a href="/" aria-label="MOV Produtora">
+        <svg height="32" viewBox="0 0 230 72" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="58" font-family="'Bebas Neue',sans-serif" font-size="64" fill="#f5f5f0" letter-spacing="1">MOV</text>
+          <circle cx="204" cy="55" r="7" fill="#d42b2b"/>
+          <text x="2" y="70" font-family="'DM Sans',sans-serif" font-size="9.5" fill="#6b6b6b" letter-spacing="9" font-weight="700">PRODUTORA</text>
+        </svg>
+      </a>
+      <div class="lp-topbar-cta">
+        <a href="https://wa.me/5585991986159?text=Ol%C3%A1%2C%20vim%20da%20p%C3%A1gina%20de%20Eventos%20Corporativos%20da%20MOV%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
+           target="_blank" class="lp-wa-btn"
+           onclick="gtag('event','whatsapp_click',{landing:'eventos-corporativos'})">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+        <a href="#lp-form" class="lp-btn">Agendar conversa</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="lp-hero">
+  <div class="lp-hero-bg"></div>
+  <div class="lp-hero-grid"></div>
+  <div class="lp-container">
+    <div class="lp-hero-content">
+      <div class="lp-live-badge"><div class="lp-live-dot"></div> AO VIVO</div>
+      <h1 class="lp-hero-h1">
+        Direção audiovisual<br>
+        <em>em tempo real</em><br>
+        para eventos corporativos.
+      </h1>
+      <p class="lp-hero-sub">
+        Cobertura multicanal com entrega no mesmo dia. Vídeo exibido aos participantes antes do encerramento,
+        conteúdo publicado durante o evento, gravação completa na íntegra.
+      </p>
+      <div class="lp-hero-acts">
+        <a href="#lp-form" class="lp-btn">Agendar conversa estratégica</a>
+        <a href="#lp-porq" class="lp-btn lp-btn-o">Como funciona</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE A MOV ENTREGA -->
+<section id="lp-entregas" class="lp-section">
+  <div class="lp-container">
+    <div class="lp-reveal">
+      <span class="lp-label">O que entregamos</span>
+      <h2 style="font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);margin-top:.3rem;line-height:.95">Três entregas.<br><em style="font-style:normal;color:var(--red)">Um único evento.</em></h2>
+    </div>
+    <div class="lp-entregas-grid lp-reveal">
+      <div class="lp-entrega-card">
+        <div class="lp-entrega-bar"></div>
+        <div class="lp-entrega-n">01</div>
+        <div class="lp-entrega-t">COBERTURA PARA REDES DO CLIENTE</div>
+        <p class="lp-entrega-d">Captação, edição on-site e publicação nos canais do cliente durante o evento. O LinkedIn já tem conteúdo antes do coquetel.</p>
+      </div>
+      <div class="lp-entrega-card">
+        <div class="lp-entrega-bar"></div>
+        <div class="lp-entrega-n">02</div>
+        <div class="lp-entrega-t">FILME DO EVENTO EM TEMPO REAL</div>
+        <p class="lp-entrega-d">Edição finalizada antes do encerramento. Os participantes assistem ao próprio evento como narrativa cinematográfica — ainda no auditório.</p>
+      </div>
+      <div class="lp-entrega-card">
+        <div class="lp-entrega-bar"></div>
+        <div class="lp-entrega-n">03</div>
+        <div class="lp-entrega-t">GRAVAÇÃO COMPLETA</div>
+        <p class="lp-entrega-d">Registro na íntegra entregue no fim da noite. Para arquivo institucional, treinamentos internos e reuso em comunicação futura.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section id="lp-prova">
+  <div class="lp-container">
+    <p class="lp-prova-quote lp-reveal">
+      "Operações executadas em<br>
+      <em>Fortaleza, Recife, São Paulo</em> e outras capitais."
+    </p>
+  </div>
+</section>
+
+<!-- POR QUE ENTREGA EM TEMPO REAL -->
+<section id="lp-porq" class="lp-section">
+  <div class="lp-container">
+    <div class="lp-porq-wrap">
+      <div class="lp-porq-sticky lp-reveal">
+        <span class="lp-label">O diferencial</span>
+        <h2 class="lp-porq-title">Por que entrega<br>em tempo real<br><em>muda o jogo.</em></h2>
+      </div>
+      <div class="lp-porq-paras lp-reveal lp-d1">
+        <p class="lp-porq-p">A maioria das empresas recebe o vídeo do evento corporativo 15 dias depois. Quando o material chega, o engajamento já passou. O LinkedIn já esqueceu. O sentimento já dissipou.</p>
+        <p class="lp-porq-p">A MOV inverte essa lógica. <strong>Estação de edição on-site.</strong> Equipe redundante para captação e edição em paralelo. Workflow direto câmera → editor → tela do auditório.</p>
+        <p class="lp-porq-p">O resultado: participantes saem com a experiência ancorada por imagem. Marketing e RH têm conteúdo pronto para LinkedIn no dia seguinte. <strong>O evento vira ativo de comunicação no mesmo dia — não em 15 dias.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE LOCAL -->
+<section id="lp-local" class="lp-section lp-section-alt">
+  <div class="lp-container">
+    <div class="lp-local-inner">
+      <div class="lp-reveal">
+        <span class="lp-label">Para empresas de fora</span>
+        <h2 class="lp-local-h2">Sua equipe não precisa<br>cruzar o Brasil para cobrir<br><em>seu evento.</em></h2>
+        <p class="lp-local-p">
+          A MOV opera com equipe local em Fortaleza para empresas com matriz em São Paulo, Rio, Brasília e outras capitais.
+          Sem custo de deslocamento de produtora própria. Direção sênior com mais de 7 anos atendendo clientes corporativos em todo o Brasil.
+        </p>
+        <div class="lp-cities" style="margin-bottom:2rem">
+          <span class="lp-city">Fortaleza</span>
+          <span class="lp-city">São Paulo</span>
+          <span class="lp-city">Rio de Janeiro</span>
+          <span class="lp-city">Recife</span>
+          <span class="lp-city">Brasília</span>
+          <span class="lp-city">Salvador</span>
+        </div>
+        <a href="#lp-form" class="lp-btn">Conversar sobre seu evento</a>
+      </div>
+      <div class="lp-reveal lp-d2" style="background:var(--g80);border:1px solid var(--g60);padding:2.5rem;border-radius:2px">
+        <div style="font-family:var(--fd);font-size:3.5rem;color:var(--red);line-height:1;margin-bottom:.5rem">SAME<br>DAY</div>
+        <p style="font-size:.88rem;color:var(--g20);font-weight:300;line-height:1.7;border-top:1px solid var(--g60);padding-top:1rem;margin-top:1rem">
+          ⚡ Entrega do vídeo editado ainda durante o evento. Ideal para redes sociais em tempo real, exibição no auditório e comunicação pós-evento imediata.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section id="lp-cases" class="lp-section">
+  <div class="lp-container">
+    <div class="lp-reveal">
+      <span class="lp-label">Cases</span>
+      <h2 style="font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);margin-top:.3rem;line-height:.95">Eventos cobertos.<br><em style="font-style:normal;color:var(--red)">Conteúdo entregue no dia.</em></h2>
+    </div>
+    <div class="lp-cases-grid lp-reveal">
+
+      <!-- TODO: substituir pelo case real de evento corporativo em Fortaleza -->
+      <div class="lp-case">
+        <div class="lp-case-thumb">
+          <div class="lp-case-thumb-p">FRAME DO EVENTO AQUI</div>
+        </div>
+        <div class="lp-case-body">
+          <div class="lp-case-tag">Evento Corporativo · Fortaleza</div>
+          <div class="lp-case-t">Bootcamp Empresarial — BS Design</div>
+          <p class="lp-case-d">Cobertura completa com filme exibido aos participantes antes do encerramento do evento. Conteúdo para redes sociais publicado durante o evento. <!-- TODO: métricas reais --></p>
+        </div>
+      </div>
+
+      <!-- TODO: substituir pelo case real de evento com operação remota -->
+      <div class="lp-case">
+        <div class="lp-case-thumb">
+          <div class="lp-case-thumb-p">FRAME DO EVENTO AQUI</div>
+        </div>
+        <div class="lp-case-body">
+          <div class="lp-case-tag">Evento Corporativo · São Paulo</div>
+          <div class="lp-case-t">High Ticket Intensive — Alpha Ville</div>
+          <p class="lp-case-d">Operação com equipe MOV deslocada para São Paulo. Cobertura multicanal, gravação completa e entrega same day para o cliente. <!-- TODO: métricas reais --></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁRIO -->
+<section id="lp-form" class="lp-section lp-section-alt">
+  <div class="lp-container">
+    <div id="lp-form-content">
+      <div class="lp-form-wrap">
+        <div class="lp-form-intro lp-reveal">
+          <span class="lp-label">Próximo passo</span>
+          <h2>Vamos conversar sobre<br><em>seu evento.</em></h2>
+          <p>Preencha os dados abaixo. Nossa equipe entra em contato em até 24h para agendar uma conversa estratégica sobre a cobertura.</p>
+          <div class="lp-form-trust">
+            <div class="lp-form-trust-item">Equipe local em Fortaleza para todo o Brasil</div>
+            <div class="lp-form-trust-item">Entrega do vídeo no mesmo dia do evento</div>
+            <div class="lp-form-trust-item">Cobertura para redes + gravação completa</div>
+          </div>
+        </div>
+        <div class="lp-reveal lp-d1">
+          <!-- TODO: substituir FORMSPREE_ID pelo endpoint real em https://formspree.io -->
+          <form class="lp-form" id="lpFormEV"
+                action="https://formspree.io/f/FORMSPREE_ID"
+                method="POST">
+
+            <input type="hidden" name="utm_source"   id="ev_utm_source">
+            <input type="hidden" name="utm_medium"   id="ev_utm_medium">
+            <input type="hidden" name="utm_campaign" id="ev_utm_campaign">
+            <input type="hidden" name="utm_content"  id="ev_utm_content">
+            <input type="hidden" name="utm_term"     id="ev_utm_term">
+            <input type="hidden" name="landing_page" value="eventos-corporativos">
+
+            <div class="lp-field">
+              <label>Nome completo *</label>
+              <input type="text" name="nome" required placeholder="Seu nome" />
+            </div>
+            <div class="lp-field">
+              <label>Empresa *</label>
+              <input type="text" name="empresa" required placeholder="Nome da empresa" />
+            </div>
+            <div class="lp-field">
+              <label>Cargo *</label>
+              <input type="text" name="cargo" required placeholder="Ex: Diretora de RH" />
+            </div>
+            <div class="lp-field">
+              <label>E-mail corporativo *</label>
+              <input type="email" name="email" required placeholder="voce@empresa.com.br" />
+            </div>
+            <div class="lp-field">
+              <label>WhatsApp *</label>
+              <input type="tel" name="whatsapp" required placeholder="(85) 99999-9999" />
+            </div>
+            <div class="lp-field">
+              <label>Cidade do evento *</label>
+              <input type="text" name="cidade_evento" required placeholder="Ex: Fortaleza, CE" />
+            </div>
+            <div class="lp-field">
+              <label>Data prevista do evento</label>
+              <input type="date" name="data_evento" />
+            </div>
+            <div class="lp-field">
+              <label>Faixa de investimento</label>
+              <select name="investimento">
+                <option value="" disabled selected>Selecione</option>
+                <option>Até R$10k</option>
+                <option>R$10k – R$25k</option>
+                <option>R$25k – R$50k</option>
+                <option>R$50k+</option>
+                <option>A definir</option>
+              </select>
+            </div>
+            <div class="lp-field lp-form-full">
+              <label>Tipo de entrega desejada</label>
+              <div class="lp-checkgroup">
+                <label class="lp-check-label"><input type="checkbox" name="entrega[]" value="Cobertura para redes" /> Cobertura para redes sociais (durante o evento)</label>
+                <label class="lp-check-label"><input type="checkbox" name="entrega[]" value="Filme em tempo real" /> Filme do evento exibido ainda no auditório</label>
+                <label class="lp-check-label"><input type="checkbox" name="entrega[]" value="Gravação completa" /> Gravação completa na íntegra</label>
+                <label class="lp-check-label"><input type="checkbox" name="entrega[]" value="Tudo acima" /> Tudo acima</label>
+              </div>
+            </div>
+            <div class="lp-field lp-form-full">
+              <label>Mensagem (opcional)</label>
+              <textarea name="mensagem" placeholder="Detalhes sobre o evento..."></textarea>
+            </div>
+            <div class="lp-form-submit">
+              <button type="submit" class="lp-btn">Agendar conversa estratégica</button>
+              <p class="lp-privacy">Seus dados são confidenciais e usados apenas para contato comercial.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="lp-form-success" style="display:none;text-align:center;padding:4rem 2rem">
+      <div style="width:48px;height:48px;border-radius:50%;background:rgba(212,43,43,.12);border:2px solid var(--red);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 style="font-family:var(--fd);font-size:2.5rem;margin-bottom:1rem">Mensagem recebida.</h3>
+      <p style="color:var(--g20);font-weight:300;margin-bottom:2rem">Nossa equipe retorna em até 24h para agendar uma conversa sobre a cobertura do seu evento.</p>
+      <a href="/" class="lp-btn lp-btn-o">Voltar para o site</a>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="lp-footer">
+  <div class="lp-container">
+    <div class="lp-footer-inner">
+      <svg height="28" viewBox="0 0 230 72" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="58" font-family="'Bebas Neue',sans-serif" font-size="64" fill="#f5f5f0" letter-spacing="1">MOV</text>
+        <circle cx="204" cy="55" r="7" fill="#d42b2b"/>
+        <text x="2" y="70" font-family="'DM Sans',sans-serif" font-size="9.5" fill="#6b6b6b" letter-spacing="9" font-weight="700">PRODUTORA</text>
+      </svg>
+      <div class="lp-footer-links">
+        <a href="mailto:contato@movprodutora.com.br" class="lp-footer-link">contato@movprodutora.com.br</a>
+        <a href="https://wa.me/5585991986159" target="_blank" class="lp-footer-link">(85) 99198.6159</a>
+      </div>
+      <a href="/" class="lp-footer-back">← Voltar para movprodutora.com.br</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.lp-reveal');
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('lp-vis'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  els.forEach(function(el){ obs.observe(el); });
+})();
+
+document.getElementById('lpFormEV').addEventListener('submit', function(e){
+  e.preventDefault();
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+    var el = document.getElementById('ev_' + k);
+    if(el) el.value = sessionStorage.getItem(k) || '';
+  });
+  if(typeof gtag !== 'undefined'){
+    gtag('event','generate_lead',{currency:'BRL',value:1.0,landing:'eventos-corporativos'});
+    // TODO: substituir AW-CONVERSION_ID/LABEL
+    gtag('event','conversion',{'send_to':'AW-CONVERSION_ID/LABEL'});
+  }
+  var form = this;
+  fetch(form.action, {
+    method:'POST', body: new FormData(form), headers:{'Accept':'application/json'}
+  }).then(function(r){
+    if(r.ok){
+      document.getElementById('lp-form-content').style.display='none';
+      document.getElementById('lp-form-success').style.display='block';
+    }
+  }).catch(function(){ alert('Erro ao enviar. Por favor tente pelo WhatsApp.'); });
+});
+</script>
+</body>
+</html>
