@@ -362,6 +362,14 @@
   </div>
 </div>
 
+<!-- VIDEO LIGHTBOX -->
+<div class="vlb" id="vlb" onclick="vlbClose(event)">
+  <div class="vlb-inner">
+    <button class="vlb-close" onclick="vlbCloseBtn()">×</button>
+    <div id="vlbFrame"></div>
+  </div>
+</div>
+
 <!-- DEPOIMENTOS -->
 <!-- TODO: substituir por 3 depoimentos novos de gestores de marketing /
 diretores de empresas (Gerdau, UniAteneu, Ironberg, Hospital São Raimundo) -->
@@ -644,9 +652,13 @@ const fotos = [
 
 // ── Render vídeos
 const playIcon = `<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`;
+function youtubeId(url) {
+  const m = url.match(/(?:v=|youtu\.be\/|embed\/)([^&?/]+)/);
+  return m ? m[1] : '';
+}
 function buildVid(v, cls) {
   const hasThumb = v.thumb && v.thumb.length > 0;
-  return `<a href="${v.url}" target="_blank" class="pf-item ${cls}">
+  return `<div class="pf-item ${cls}" onclick="vlbOpen('${youtubeId(v.url)}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')vlbOpen('${youtubeId(v.url)}')" aria-label="Assistir: ${v.title}">
     ${hasThumb ? `<img class="pf-thumb" src="${v.thumb}" alt="${v.title}" loading="lazy">` : `<div class="pf-ph"><span style="font-size:2rem">▶</span><span>${v.category}</span></div>`}
     <div class="pf-ov">
       <div class="pf-play">${playIcon}</div>
@@ -655,7 +667,7 @@ function buildVid(v, cls) {
         <div class="pf-tit">${v.title}</div>
       </div>
     </div>
-  </a>`;
+  </div>`;
 }
 document.getElementById('pfV').innerHTML = videosV.map(v => buildVid(v,'v')).join('');
 document.getElementById('pfW').innerHTML = videosW.map(v => buildVid(v,'w')).join('');
@@ -705,6 +717,24 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') lbCloseBtn();
   if (e.key === 'ArrowRight') lbNav(1);
   if (e.key === 'ArrowLeft') lbNav(-1);
+});
+
+// ── Lightbox de vídeo (YouTube embed)
+function vlbOpen(id) {
+  if (!id) return;
+  document.getElementById('vlbFrame').innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0" title="Player de vídeo MOV Produtora" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  document.getElementById('vlb').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function vlbCloseBtn() {
+  document.getElementById('vlb').classList.remove('open');
+  document.getElementById('vlbFrame').innerHTML = '';
+  document.body.style.overflow = '';
+}
+function vlbClose(e) { if (e.target === document.getElementById('vlb')) vlbCloseBtn(); }
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('vlb').classList.contains('open')) return;
+  if (e.key === 'Escape') vlbCloseBtn();
 });
 
 // ── Header scroll
