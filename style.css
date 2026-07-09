@@ -107,7 +107,7 @@ nav a:hover{color:var(--white)}
 /* PORTFÓLIO VÍDEOS */
 #portfolio-videos{padding:7rem 0;background:var(--gray-90)}
 .pf-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3.5rem;gap:2rem;flex-wrap:wrap}
-.pf-grid-v{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.pf-grid-v{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .pf-grid-w{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem}
 .pf-item{position:relative;overflow:hidden;border-radius:2px;background:var(--gray-80);cursor:pointer;display:block}
 .pf-item.v{aspect-ratio:9/16} .pf-item.w{aspect-ratio:16/9}
@@ -322,7 +322,7 @@ footer{background:var(--gray-90);border-top:1px solid var(--gray-60);padding:4re
 @media(max-width:1024px){
   .svch-grid{grid-template-columns:repeat(2,1fr)}
   .srv-grid{grid-template-columns:repeat(2,1fr)}
-  .pf-grid-v{grid-template-columns:repeat(2,1fr)}
+  .pf-grid-v{grid-template-columns:repeat(3,1fr)}
   .ft-g{grid-template-columns:1fr 1fr}
   .masonry{column-count:3}
   .studio-g{grid-template-columns:1fr}
